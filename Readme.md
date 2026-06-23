@@ -1,8 +1,8 @@
 Website Bán Trà Sữa
-Dự án website bán trà sữa được xây dựng bằng ASP.NET Core MVC, cung cấp giải pháp đặt hàng trực tuyến tiện lợi, quản lý sản phẩm chuyên nghiệp và theo dõi đơn hàng hiệu quả. Dự án đã hoàn thành 100% các chức năng cốt lõi.
+Dự án website bán trà sữa được xây dựng bằng ASP.NET MVC, cung cấp giải pháp đặt hàng trực tuyến tiện lợi, quản lý sản phẩm chuyên nghiệp và theo dõi đơn hàng hiệu quả. Dự án đã hoàn thành 100% các chức năng cốt lõi.
 
 🛠 Công nghệ sử dụng
-Backend: ASP.NET  MVC
+Backend: ASP.NET MVC
 
 Database: SQL Server (LocalDB)
 
@@ -14,7 +14,7 @@ Người dùng (Khách hàng)
 
 Menu Trà Sữa: Xem danh sách sản phẩm, lọc theo loại (trà trái cây, trà sữa, kem cheese...).
 
-Giỏ hàng: Thêm/xóa sản phẩm, tùy chỉnh topping, mức đường/đá.
+Giỏ hàng: Thêm/xóa sản phẩm
 
 Đặt hàng: Thực hiện quy trình đặt hàng trực tuyến ổn định.
 
