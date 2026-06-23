@@ -47,8 +47,6 @@ Comments & Wishlist: Dữ liệu tương tác từ người dùng.
 ⚙️ Hướng dẫn cài đặt
 Clone repository: git clone <link-repo>
 
-Cấu hình DB: Cập nhật ConnectionStrings trong appsettings.json.
-
-Chạy Migration: Sử dụng lệnh Update-Database trong Package Manager Console.
-
+Cấu hình DB: Cập nhật ConnectionStrings trong web.config.
+Import database mẫu
 Chạy dự án: Nhấn F5 trong Visual Studio để khởi chạy website.
