@@ -1,0 +1,59 @@
+﻿@model IEnumerable<ShoeShopOnline.Model.DAL.About>
+
+@{
+    ViewBag.Title = "Giới thiệu cửa hàng";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+    int i = 1;
+}
+
+<!-- DataTales Example -->
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">@ViewBag.Title</h6>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <p>
+                    <a href="/quan-tri/gioi-thieu-cua-hang/them-moi" class="btn btn-group-sm btn-primary text-decoration-none"><i class="fa fa-plus"></i> Thêm mới</a>
+                </p>
+                <thead>
+                    <tr>
+                        <th>
+                            STT
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Title)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Description)
+                        </th>
+                        <th class="text-center" style="width: 115px;"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @i
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Title)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Description)
+                            </td>
+                            <td>
+                                <a class="btn-sm btn-group-sm btn-success" href="/quan-tri/gioi-thieu-cua-hang/cap-nhat?id=@item.Id"><i class="far fa-edit"></i></a>
+                                <a class="btn-sm btn-group-sm btn-secondary dialog-link" href="@Url.Action("Details", new { id = item.Id })"><i class="fas fa-info"></i></a>
+                                <a class="btn-sm btn-group-sm btn-danger dialog-link" href="@Url.Action("Delete", new { id = item.Id })"><i class="far fa-trash-alt"></i></a>
+                            </td>
+                        </tr>
+                        i++;
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

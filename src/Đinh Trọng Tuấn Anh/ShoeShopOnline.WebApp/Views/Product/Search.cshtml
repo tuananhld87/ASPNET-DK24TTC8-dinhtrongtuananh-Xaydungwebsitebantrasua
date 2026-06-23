@@ -1,0 +1,54 @@
+﻿@model List<ShoeShopOnline.Model.ViewModel.ProductViewModel>
+@{
+    ViewBag.Title = "Kết quả tìm kiếm theo từ khóa";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container">
+    <h5><b>Kết quả tìm kiếm theo từ khóa @ViewBag.Keyword:</b> <span class="text-success">có @ViewBag.Count sản phẩm</span></h5>
+    @if ((int)ViewBag.Count > 0)
+    {
+        <div class="container">
+            @foreach (var item in Model)
+            {
+                var url = "/chi-tiet-san-pham/" + item.MetaTitle + "/" + item.Id;
+
+                <div class="col-md-3 product-left" style="margin-top: 20px;">
+                    <div class="p-one simpleCart_shelfItem" style="height:410px;">
+                        <a href="@url">
+                            <img src="@item.Images" alt="" style="height:250px;" />
+                            <div class="mask">
+                                <span>Xem chi tiết</span>
+                            </div>
+                        </a>
+                        <h4>@item.Name</h4>
+                        @if (item.PromotionPrice > 0)
+                        {
+                            if (item.Quantity > 0)
+                            {
+                                <p><a class="" href="#"><span class=""><strike>@(item.Price.Value.ToString("N0"))</strike></span></a></p> <br />
+                                <p><a class="item_add" href="/them-gio-hang?productId=@item.Id&quantity=1"><i></i> <span class=" item_price">@(item.PromotionPrice.Value.ToString("N0"))</span></a></p>
+                            }
+                            else
+                            {
+                                <p><a class="" href="#"><span class=""><strike>@(item.Price.Value.ToString("N0"))</strike></span></a></p> <br />
+                                <p><a class="item_add" style="pointer-events: none" href="/them-gio-hang?productId=@item.Id&quantity=1"><i></i> <span class=" item_price">@(item.PromotionPrice.Value.ToString("N0"))</span></a></p>
+                            }
+                        }
+                        else
+                        {
+                            if (item.Quantity > 0)
+                            {
+                                <p><a class="item_add" href="/them-gio-hang?productId=@item.Id&quantity=1"><i></i> <span class=" item_price">@(item.Price.HasValue ? item.Price.Value.ToString("N0") : "Liên hệ")</span></a></p>
+                            }
+                            else
+                            {
+                                <p><a class="item_add" style="pointer-events: none" href="/them-gio-hang?productId=@item.Id&quantity=1"><i></i> <span class=" item_price">@(item.Price.HasValue ? item.Price.Value.ToString("N0") : "Liên hệ")</span></a></p>
+                            }
+                        }
+                    </div>
+                </div>
+            }
+
+        </div>
+    }
+</div>

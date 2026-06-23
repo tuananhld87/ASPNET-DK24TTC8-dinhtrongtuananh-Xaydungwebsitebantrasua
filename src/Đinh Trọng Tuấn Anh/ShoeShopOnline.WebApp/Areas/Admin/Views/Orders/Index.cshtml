@@ -1,0 +1,139 @@
+﻿@model PagedList.IPagedList<ShoeShopOnline.Model.DAL.Order>
+@using PagedList.Mvc;
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+@{
+    ViewBag.Title = "Đơn đặt hàng";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+    int i = 1;
+}
+
+<!-- DataTales Example -->
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">@ViewBag.Title</h6>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                @using (Html.BeginForm())
+                {
+                    <div class="form-group">
+                        @Html.TextBox("SearchString", null, new { @class = "col-md-4 form-control float-left", @value = ViewBag.SearchString })
+                        <button type="submit" class="btn btn-secondary ml-1"><i class="fa fa-search"></i></button>
+                        <a href="/quan-tri/don-dat-hang-da-huy" class="float-right btn btn-group-sm btn-primary text-decoration-none">Đơn đã hủy</a>
+                    </div>
+                }
+                <thead>
+                    <tr>
+                        <th>
+                            STT
+                        </th>
+                        <th>
+                            Tên khách hàng
+                            <a href="/quan-tri/don-dat-hang?sortOrder=@ViewBag.NameSortParm&searchString=@ViewBag.SearchString"><i class="fas fa-sort text-dark"></i></a>
+                        </th>
+                        <th>
+                            Số điện thoại
+                        </th>
+                        <th>
+                            Địa chỉ
+                        </th>
+                        <th>
+                            Email
+                        </th>
+                        <th style="width: 150px;">
+                            Ngày đặt hàng
+                            <a href="/quan-tri/don-dat-hang?sortOrder=@ViewBag.CreatedOnSortParm&searchString=@ViewBag.SearchString"><i class="fas fa-sort text-dark"></i></a>
+                        </th>
+                        <th style="width: 135px;">
+                            Trạng thái
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td class="text-center">
+                                @i
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ShipName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ShipPhone)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ShipAddress)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ShipEmail)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.CreatedOn)
+                            </td>
+                            <td>
+                                <a href="#" class="btn-active btn btn-primary btn-sm" data-id="@item.Id">@(item.Status ? "Đã hoàn thành" : "Đang xử lý")</a>
+                            </td>
+                            <td class="text-center" style="width: 80px;">
+                                <a class="btn-sm btn-group-sm btn-secondary dialog-link" href="@Url.Action("Details", new { id = item.Id })"><i class="fas fa-info"></i></a>
+                                @if (item.Status)
+                                {
+
+                                }
+                                else
+                                {
+                                    <a class="btn-sm btn-group-sm btn-danger dialog-link" href="@Url.Action("Delete", new { id = item.Id })"><i class="far fa-trash-alt"></i></a>
+                                }
+
+                            </td>
+                        </tr>
+                        i++;
+                    }
+                </tbody>
+            </table>
+            @if (Model.Count() <= 0)
+            {
+                <div class="text-center text-danger">Không có dữ liệu</div>
+            }
+        </div>
+        <div class="text-center">
+            Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) trên @Model.PageCount
+            @Html.PagedListPager(Model, page => Url.Action("Index", new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <script>
+        var order = {
+            init: function () {
+                order.registerEvents();
+            },
+            registerEvents: function () {
+                $('.btn-active').off('click').on('click', function (e) {
+                    e.preventDefault();
+                    var btn = $(this);
+                    var id = btn.data('id');
+                    $.ajax({
+                        url: "/Admin/Orders/ChangeStatus",
+                        data: { id: id },
+                        dataType: "json",
+                        type: "POST",
+                        success: function (response) {
+                            console.log(response);
+                            if (response.status == true) {
+                                btn.text('Đã hoàn thành');
+                            }
+                            else {
+                                btn.text('Đang xử lý');
+                            }
+                        }
+                    })
+                });
+            },
+        }
+        order.init();
+    </script>
+}

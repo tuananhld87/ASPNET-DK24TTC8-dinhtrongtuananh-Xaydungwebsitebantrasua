@@ -1,0 +1,61 @@
+﻿@model PagedList.IPagedList<ShoeShopOnline.Model.DAL.News>
+@using PagedList.Mvc;
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+@{
+    ViewBag.Title = "Tất cả tin tức";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!--start-breadcrumbs-->
+<div class="breadcrumbs">
+    <div class="container">
+        <div class="breadcrumbs-main">
+            <ol class="breadcrumb">
+                <li><a href="/trang-chu">Trang chủ</a></li>
+                <li class="active">@ViewBag.Title</li>
+            </ol>
+        </div>
+    </div>
+</div>
+<!--end-breadcrumbs-->
+<!--start-single-->
+<div class="single contact">
+    <div class="container">
+        <div class="single-main">
+            <div class="col-md-9 single-main-left">
+                <div class="sngl-top">
+                    @if ((int)ViewBag.Count > 0)
+                    {
+                        foreach (var item in Model)
+                        {
+                            var url = "/chi-tiet-tin-tuc/" + item.MetaTitle + "/" + item.Id;
+                            <div class="col-md-12 row" style="margin-top: 10px;">
+                                <div class="col-md-4">
+                                    <a href="@url"><img src="@item.UrlImage" width="240" height="200" alt="Alternate Text" /></a>
+                                </div>
+                                <div class="col-md-8">
+                                    <a href="@url"><h4>@item.Name</h4></a>
+                                    <i><span>Đăng bởi: @item.CreatedBy [Ngày đăng: @item.CreatedOn</span></i>
+                                    <p>@item.Summary</p>
+                                    <a href="@url" class="btn btn-sm btn-danger">Xem chi tiết</a>
+                                </div>
+                            </div>
+                        }
+                    }
+                </div>
+            </div>
+            <div class="col-md-3 single-right">
+                <h3>Loại tin tức</h3>
+                <ul class="product-categories">
+                    @{ Html.RenderAction("LoadNewsCategory", "NewsContent");}
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+    <div class="text-center col-md-10" style="margin-top: 10px;">
+        Trang <span> @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber)</span> trên <span>@Model.PageCount</span>
+        @Html.PagedListPager(Model, page => Url.Action("LoadAllNews", new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))
+    </div>
+</div>
+<!--end-single-->

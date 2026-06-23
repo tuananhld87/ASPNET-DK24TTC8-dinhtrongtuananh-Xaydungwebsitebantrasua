@@ -1,0 +1,144 @@
+﻿@model ShoeShopOnline.Model.DAL.Product
+@{
+    ViewBag.Title = "Chi tiết sản phẩm";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    .imageDetail{
+        transition: all .4s ease-in-out;
+    }
+    .imageDetail:hover{
+        transform: scale(1.4);
+    }
+</style>
+<!--start-breadcrumbs-->
+<div class="breadcrumbs">
+    <div class="container">
+        <div class="breadcrumbs-main">
+            <ol class="breadcrumb">
+                <li><a href="/trang-chu">Trang chủ</a></li>
+                <li class="active">@ViewBag.Title</li>
+            </ol>
+        </div>
+    </div>
+</div>
+<!--end-breadcrumbs-->
+<!--start-single-->
+<div class="single contact">
+    <div class="container">
+        <div class="single-main">
+            <div class="col-md-9 single-main-left">
+                <div class="sngl-top">
+                    <div class="col-md-5 single-top-left">
+                        <div class="flexslider">
+                            <ul class="slides">
+                                <li data-thumb="images/s1.jpg">
+                                    <img src="@Model.UrlImage" class="imageDetail" />
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- FlexSlider -->
+                        <script defer src="~/Content/Client/js/jquery.flexslider.js"></script>
+                        <link rel="stylesheet" href="~/Content/Client/css/flexslider.css" type="text/css" media="screen" />
+
+                        <script>
+                            // Can also be used with $(document).ready()
+                            $(window).load(function () {
+                                $('.flexslider').flexslider({
+                                    animation: "slide",
+                                    controlNav: "thumbnails"
+                                });
+                            });
+                        </script>
+                    </div>
+                    <div class="col-md-7 single-top-right">
+                        <div class="details-left-info simpleCart_shelfItem">
+                            <h3>@Model.Name</h3>
+                            <p class="availability">
+                                Tình trạng:
+                                @if (Model.Quantity > 0)
+                                {
+                                    <span class="text-primary">Còn @Model.Quantity sản phẩm</span>
+                                }
+                                else
+                                {
+                                    <span class="text-danger">Tạm hết hàng</span>
+                                }
+                            </p>
+                            <div class="price_single">
+                                @if (Model.PromotionPrice > 0)
+                                {
+                                    <span class="reducedfrom text-danger"><span>Giá gốc: </span>@(Model.Price.HasValue ? Model.Price.Value.ToString("N0") : "Liên hệ")đ</span>
+                                    <br />
+                                    <span class="actual item_price"><span>Giá khuyến mãi: </span>@(Model.PromotionPrice.Value.ToString("N0"))đ</span>
+                                }
+                                else
+                                {
+                                    <span class="actual item_price"><span>Giá: </span>@(Model.Price.HasValue ? Model.Price.Value.ToString("N0") : "Liên hệ")đ</span>
+                                }
+
+                            </div>
+                            <h2 class="quick">Mô tả:</h2>
+                            <p class="quick_desc" style="color:black;font-family:Arial;font-size:110%;height:160px">@Html.Raw(Model.Detail)</p>
+                            <div class="clearfix"> </div>
+                            <div class="single-but item_add">
+                                <a href="/them-gio-hang?productId=@Model.Id&quantity=1">
+                                    @if (Model.Quantity > 0)
+                                    {
+                                        <input type="submit" value="Thêm vào giỏ" />
+                                    }
+                                    else
+                                    {
+                                        <input type="submit" disabled value="Thêm vào giỏ" />
+                                    }
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <!--<div class="latest products">
+        <p>
+            [OWEN MIỀN BẮC]
+            ƯU ĐÃI TƯNG BỪNG - CHÀO MỪNG ĐẠI LỄ
+            #MUA_2 #TẶNG_1 ngay tại cửa hàng (*)
+
+            - Thời gian ưu đãi: 21/4 - 28/4/2021
+            Nhân dịp lễ truyền thống lớn của năm, OWEN xin gửi tới toàn bộ khách hàng chương trình ưu đãi: Mua 2 sản phẩm tại cửa hàng nhận ngay 1 trong các #Quà_tặng:
+
+            - NÓN BẢO HIỂM
+            - Ô/DÙ
+
+            Cơ hội mua sắm hàng nghìn sản phẩm hè với ưu đãi hấp dẫn đang chờ đón bạn tại hệ thống cửa hàng OWEN!!! Đừng bỏ lỡ nhé!
+            (*) Lưu ý:
+            - Chương trình không áp dụng với sản phẩm áo T-shirt, cà vạt, tất và đồ lót.
+            - Không áp dụng đồng thời các CTKM khác.
+            - Chương trình có thể kết thúc sớm hơn dự kiến vì số lượng quà tặng có hạn.
+        </p>
+    </div>-->   <div class="decrip" style="margin-top: 20px">
+                <h2>THÔNG TIN SẢN PHẨM</h2>
+
+                   @Html.Raw(Model.Description)
+</div>
+
+                <div class="latest products">
+                
+                    <div class="product-one">
+                        <h2>Sản phẩm tương tự</h2>
+                        @{ Html.RenderAction("LoadLastedProduct", "Product");}
+                        <div class="clearfix"> </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 single-right">
+                <h3>Thương hiệu</h3>
+                <ul class="product-categories">
+                    @{ Html.RenderAction("LoadCategory", "Product");}
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+</div>
+<!--end-single-->

@@ -1,0 +1,108 @@
+﻿@model List<ShoeShopOnline.WebApp.Models.CartItem>
+@{
+    ViewBag.Title = "Giỏ hàng";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Scripts{
+    <script src="~/Content/Client/js/Controller/cartController.js"></script>
+}
+<!--start-breadcrumbs-->
+<div class="breadcrumbs">
+    <div class="container">
+        <div class="breadcrumbs-main">
+            <ol class="breadcrumb">
+                <li><a href="/trang-chu">Trang chủ</a></li>
+                <li class="active">@ViewBag.Title</li>
+            </ol>
+        </div>
+    </div>
+</div>
+<!--end-breadcrumbs-->
+@if (Model.Count > 0)
+{
+    <div class="table-responsive container">
+        <table class="table table-bordered table-striped table-condensed">
+            <thead>
+                <tr>
+                    <td>Mã sản phẩm</td>
+                    <td>Tên sản phẩm</td>
+                    <td>Ảnh sản phẩm</td>
+                    <td>Số lượng</td>
+                    <td>Đơn giá</td>
+                    <td>Thành tiền</td>
+                    <td></td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Product.Id</td>
+                        <td>@item.Product.Name</td>
+                        <td><img src="@item.Product.UrlImage" alt="Alternate Text" width="100" height="70" /></td>
+                        <td><input type="text" onchange="updateQuantity()" class="txtQuantity" data-id="@item.Product.Id" name="name" value="@item.Quantity" /></td>
+                        <td>
+                            @if (item.Product.PromotionPrice != null)
+                            {
+                                @item.Product.PromotionPrice.GetValueOrDefault(0).ToString("N0")
+                            }
+                            else
+                            {
+                                @item.Product.Price.GetValueOrDefault(0).ToString("N0")
+                            }
+                        </td>
+                        <td>
+                            @if (item.Product.PromotionPrice != null)
+                            {
+                                @((item.Product.PromotionPrice.GetValueOrDefault(0) * item.Quantity).ToString("N0"))
+                            }
+                            else
+                            {
+                                @((item.Product.Price.GetValueOrDefault(0) * item.Quantity).ToString("N0"))
+                            }
+                        </td>
+                        <td><a href="#" data-id="@item.Product.Id" class="btn-delete">Xoá</a></td>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+
+        <div style="float:right;">
+            <button id="btnContinue" class="btn">Tiếp tục mua hàng</button>
+            <button id="btnDeleteAll" class="btn">Xóa giỏ hàng</button>
+            <button id="btnPayment" class="btn">Thanh toán</button>
+        </div>
+    </div>
+}
+else
+{
+    <div class="container">
+        <span class="alert alert-danger" style="margin-top: 40px;">Chưa có sản phẩm nào trong giỏ hàng</span>
+    </div>
+}
+<script>
+    function updateQuantity() {
+        var listProduct = $('.txtQuantity');
+        var cartList = [];
+        $.each(listProduct, function (i, item) {
+            cartList.push({
+                Quantity: $(item).val(),
+                Product: {
+                    ID: $(item).data('id')
+                }
+            })
+        });
+        $.ajax({
+            url: '/Cart/Update',
+            data: { cartModel: JSON.stringify(cartList) },
+            dataType: 'json',
+            type: 'POST',
+            success: function (res) {
+                if (res.status == true) {
+                    window.location.href = "/gio-hang";
+                }
+            }
+        })
+    };
+</script>

@@ -1,0 +1,57 @@
+﻿@model ShoeShopOnline.Model.DAL.About
+
+@{
+    ViewBag.Title = "Tạo giới thiệu";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Title, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Content, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextAreaFor(model => model.Content, new { @class = "form-control", @id = "Content" })
+                @Html.ValidationMessageFor(model => model.Content, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="form-group text-right">
+                <div class="col-md-offset-2 col-md-11">
+                    <button type="submit" class="btn-primary btn-group-sm btn-sm">Thêm mới</button>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    <a href="/quan-tri/gioi-thieu-cua-hang" class="btn btn-secondary"><i class="fas fa-angle-left"></i> Trở về</a>
+</div>
+@section Scripts{
+    <script>
+        CKEDITOR.replace("Content");
+    </script>
+}

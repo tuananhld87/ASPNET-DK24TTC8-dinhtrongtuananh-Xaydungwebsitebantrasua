@@ -1,0 +1,279 @@
+﻿@model IEnumerable<ShoeShopOnline.Model.DAL.Product>
+
+@* Chỉ cần check Model khác null là đủ an toàn, tránh lỗi thiếu thư viện Linq (System.Web.HttpCompileException) *@
+@if (Model != null)
+{
+    <style>
+        /* Thêm font chữ mượt mà và cá tính từ Google Fonts (Dùng 2 dấu @@ để Razor không báo lỗi) */
+        @@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Poppins:wght@400;600&display=swap');
+
+        .hype-hot-section {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0d0d0d; /* Nền tối cực ngầu, làm nổi bật sản phẩm */
+            padding: 60px 0;
+            color: #fff;
+            overflow: hidden;
+            margin-top: 30px;
+        }
+
+        /* === BANNER STYLE === */
+        .hype-banner {
+            max-width: 1200px;
+            margin: 0 auto 50px auto;
+            background: linear-gradient(45deg, #ff3b3b, #ff0077); /* Hiệu ứng dải màu rực rỡ */
+            border-radius: 16px;
+            padding: 40px 20px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 15px 30px rgba(255, 0, 119, 0.3);
+            overflow: hidden;
+            width: 90%;
+        }
+
+        /* Hoạ tiết gạch chéo mờ chìm dưới banner */
+        .hype-banner::before {
+            content: '';
+            position: absolute;
+            top: -50%; left: -50%;
+            width: 200%; height: 200%;
+            background: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 10px,
+                rgba(255,255,255,0.05) 10px,
+                rgba(255,255,255,0.05) 20px
+            );
+            z-index: 1;
+        }
+
+        .hype-banner-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hype-banner h2 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 42px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin: 0 0 10px 0;
+            letter-spacing: 2px;
+            text-shadow: 3px 3px 0px #000;
+        }
+
+        .hype-banner p {
+            font-size: 16px;
+            margin: 0;
+            opacity: 0.9;
+            letter-spacing: 1px;
+        }
+
+        /* === GRID STYLE === */
+        .hype-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); /* Auto căn chỉnh cột */
+            gap: 30px;
+        }
+
+        /* === CARD STYLE === */
+        .hype-card {
+            background: #1a1a1a;
+            border-radius: 16px;
+            overflow: hidden;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            border: 1px solid #333;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Hiệu ứng nảy mượt mà */
+        }
+
+        .hype-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            border-color: #ff3b3b;
+            box-shadow: 0 20px 40px rgba(255, 59, 59, 0.2);
+        }
+
+        /* === SALE BADGE === */
+        .hype-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: #ff3b3b;
+            color: #fff;
+            padding: 6px 14px;
+            border-radius: 30px;
+            font-size: 12px;
+            font-weight: 700;
+            z-index: 10;
+            box-shadow: 0 4px 10px rgba(255, 59, 59, 0.4);
+            letter-spacing: 1px;
+        }
+
+        .hype-img-wrapper {
+            width: 100%;
+            height: 280px;
+            overflow: hidden;
+            background: #222;
+            position: relative;
+        }
+
+        .hype-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        /* Ảnh zoom nhẹ và xoay ngang 1 chút khi hover */
+        .hype-card:hover .hype-img-wrapper img {
+            transform: scale(1.1) rotate(2deg);
+        }
+
+        .hype-info {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .hype-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 15px;
+            line-height: 1.5;
+            height: 48px;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            transition: color 0.3s;
+        }
+        
+        .hype-card:hover .hype-title {
+            color: #ff3b3b;
+        }
+
+        .hype-price-box {
+            margin-top: auto;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+        }
+
+        .price-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .price-old {
+            color: #888;
+            text-decoration: line-through;
+            font-size: 14px;
+            margin-bottom: 4px;
+        }
+
+        .price-new {
+            color: #00ffcc; /* Màu Cyan Neon nổi bật trên nền đen */
+            font-size: 22px;
+            font-weight: 700;
+            font-family: 'Oswald', sans-serif;
+            letter-spacing: 1px;
+        }
+
+        .hype-btn {
+            background: #fff;
+            color: #000;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+
+        /* Nút giỏ hàng đổi màu đỏ khi hover */
+        .hype-card:hover .hype-btn {
+            background: #ff3b3b;
+            color: #fff;
+            transform: rotate(-15deg);
+        }
+
+        /* RESPONSIVE (Dùng 2 dấu @@ để Razor không báo lỗi) */
+        @@media (max-width: 768px) {
+            .hype-banner h2 { font-size: 32px; }
+            .hype-container { grid-template-columns: repeat(2, 1fr); gap: 15px; }
+            .hype-img-wrapper { height: 200px; }
+            .price-new { font-size: 18px; }
+            .hype-btn { width: 35px; height: 35px; font-size: 14px; }
+        }
+
+        @@media (max-width: 480px) {
+            .hype-container { grid-template-columns: 1fr; }
+            .hype-img-wrapper { height: 260px; }
+        }
+    </style>
+
+    <div class="hype-hot-section">
+        
+        <div class="hype-banner">
+            <div class="hype-banner-content">
+                <h2>🔥 Trending Drops</h2>
+                <p>NHỮNG SIÊU PHẨM HOT TRÀ SỮA</p>
+            </div>
+        </div>
+
+        <div class="hype-container">
+            @foreach (var item in Model)
+            {
+                var url = "/chi-tiet-san-pham/" + item.MetaTitle + "/" + item.Id;
+                
+                <a href="@url" class="hype-card">
+                    
+                    @* Tính toán & hiển thị % giảm giá (nếu có) *@
+                    @if (item.PromotionPrice != null && item.PromotionPrice < item.Price && item.Price > 0)
+                    {
+                        var discount = Math.Round((1 - (decimal)item.PromotionPrice / (decimal)item.Price) * 100);
+                        <div class="hype-badge">-@discount%</div>
+                    }
+
+                    <div class="hype-img-wrapper">
+                        <img src="@item.UrlImage" alt="@item.Name" />
+                    </div>
+                    
+                    <div class="hype-info">
+                        <div class="hype-title">@item.Name</div>
+                        
+                        <div class="hype-price-box">
+                            <div class="price-group">
+                                @if (item.PromotionPrice != null && item.PromotionPrice < item.Price)
+                                {
+                                    <span class="price-old">@item.Price.GetValueOrDefault(0).ToString("N0") đ</span>
+                                    <span class="price-new">
+                                        @item.PromotionPrice.GetValueOrDefault(0).ToString("N0") đ
+                                    </span>
+                                }
+                                else
+                                {
+                                    <span class="price-new" style="margin-top: 25px;">
+                                        @item.Price.GetValueOrDefault(0).ToString("N0") đ
+                                    </span>
+                                }
+                            </div>
+                            
+                            <div class="hype-btn">
+                                <i class="fa fa-shopping-cart"></i>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            }
+        </div>
+    </div>
+}

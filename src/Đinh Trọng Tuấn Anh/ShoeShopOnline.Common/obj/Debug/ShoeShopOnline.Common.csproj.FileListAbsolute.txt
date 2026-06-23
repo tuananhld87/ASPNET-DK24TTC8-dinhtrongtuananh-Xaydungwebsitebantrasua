@@ -1,0 +1,60 @@
+C:\Users\dtngh\Desktop\ShoeShopOnline\ShoeShopOnline.Common\obj\Debug\ShoeShopOnline.Common.csprojAssemblyReference.cache
+C:\Users\dtngh\Desktop\ShoeShopOnline\ShoeShopOnline.Common\obj\Debug\ShoeShopOnline.Common.csproj.CoreCompileInputs.cache
+C:\Users\dtngh\Desktop\ShoeShopOnline\ShoeShopOnline.Common\bin\Debug\ShoeShopOnline.Common.dll
+C:\Users\dtngh\Desktop\ShoeShopOnline\ShoeShopOnline.Common\bin\Debug\ShoeShopOnline.Common.pdb
+C:\Users\dtngh\Desktop\ShoeShopOnline\ShoeShopOnline.Common\obj\Debug\ShoeShopOnline.Common.dll
+C:\Users\dtngh\Desktop\ShoeShopOnline\ShoeShopOnline.Common\obj\Debug\ShoeShopOnline.Common.pdb
+C:\Users\dtngh\Desktop\ShoeShopOnline\ShoeShopOnline.Common\bin\Debug\ShoeShopOnline.Model.dll
+C:\Users\dtngh\Desktop\ShoeShopOnline\ShoeShopOnline.Common\bin\Debug\EntityFramework.dll
+C:\Users\dtngh\Desktop\ShoeShopOnline\ShoeShopOnline.Common\bin\Debug\ShoeShopOnline.Model.pdb
+C:\Users\dtngh\Desktop\ShoeShopOnline\ShoeShopOnline.Common\bin\Debug\ShoeShopOnline.Model.dll.config
+C:\Users\dtngh\Desktop\ShoeShopOnline\ShoeShopOnline.Common\bin\Debug\EntityFramework.xml
+C:\Users\dtngh\Desktop\ShoeShopOnline\ShoeShopOnline.Common\obj\Debug\ShoeShopOnline.Common.csproj.CopyComplete
+C:\Users\dtngh\Desktop\Project_ASP.NET2\ShoeShopOnline\ShoeShopOnline.Common\bin\Debug\ShoeShopOnline.Common.dll
+C:\Users\dtngh\Desktop\Project_ASP.NET2\ShoeShopOnline\ShoeShopOnline.Common\bin\Debug\ShoeShopOnline.Common.pdb
+C:\Users\dtngh\Desktop\Project_ASP.NET2\ShoeShopOnline\ShoeShopOnline.Common\obj\Debug\ShoeShopOnline.Common.csproj.CoreCompileInputs.cache
+C:\Users\dtngh\Desktop\Project_ASP.NET2\ShoeShopOnline\ShoeShopOnline.Common\obj\Debug\ShoeShopOnline.Common.dll
+C:\Users\dtngh\Desktop\Project_ASP.NET2\ShoeShopOnline\ShoeShopOnline.Common\obj\Debug\ShoeShopOnline.Common.pdb
+C:\Users\dtngh\Desktop\Project_ASP.NET2\ShoeShopOnline\ShoeShopOnline.Common\obj\Debug\ShoeShopOnline.Common.csprojAssemblyReference.cache
+E:\Asp.net\GroupSanta-SourceCode\GroupSanta-SourceCode\ShoeShopOnline\ShoeShopOnline.Common\bin\Debug\ShoeShopOnline.Common.dll
+E:\Asp.net\GroupSanta-SourceCode\GroupSanta-SourceCode\ShoeShopOnline\ShoeShopOnline.Common\bin\Debug\ShoeShopOnline.Common.pdb
+E:\Asp.net\GroupSanta-SourceCode\GroupSanta-SourceCode\ShoeShopOnline\ShoeShopOnline.Common\obj\Debug\ShoeShopOnline.Common.csprojAssemblyReference.cache
+E:\Asp.net\GroupSanta-SourceCode\GroupSanta-SourceCode\ShoeShopOnline\ShoeShopOnline.Common\obj\Debug\ShoeShopOnline.Common.csproj.CoreCompileInputs.cache
+E:\Asp.net\GroupSanta-SourceCode\GroupSanta-SourceCode\ShoeShopOnline\ShoeShopOnline.Common\obj\Debug\ShoeShopOnline.Common.dll
+E:\Asp.net\GroupSanta-SourceCode\GroupSanta-SourceCode\ShoeShopOnline\ShoeShopOnline.Common\obj\Debug\ShoeShopOnline.Common.pdb
+C:\Users\ADMIN\Desktop\ShoeShopOnline\ShoeShopOnline.Common\bin\Debug\ShoeShopOnline.Common.dll
+C:\Users\ADMIN\Desktop\ShoeShopOnline\ShoeShopOnline.Common\bin\Debug\ShoeShopOnline.Common.pdb
+C:\Users\ADMIN\Desktop\ShoeShopOnline\ShoeShopOnline.Common\obj\Debug\ShoeShopOnline.Common.csprojAssemblyReference.cache
+C:\Users\ADMIN\Desktop\ShoeShopOnline\ShoeShopOnline.Common\obj\Debug\ShoeShopOnline.Common.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\Desktop\ShoeShopOnline\ShoeShopOnline.Common\obj\Debug\ShoeShopOnline.Common.dll
+C:\Users\ADMIN\Desktop\ShoeShopOnline\ShoeShopOnline.Common\obj\Debug\ShoeShopOnline.Common.pdb
+D:\đồ án\ShoeShopOnline\ShoeShopOnline\ShoeShopOnline.Common\bin\Debug\ShoeShopOnline.Common.dll
+D:\đồ án\ShoeShopOnline\ShoeShopOnline\ShoeShopOnline.Common\bin\Debug\ShoeShopOnline.Common.pdb
+D:\đồ án\ShoeShopOnline\ShoeShopOnline\ShoeShopOnline.Common\obj\Debug\ShoeShopOnline.Common.csprojAssemblyReference.cache
+D:\đồ án\ShoeShopOnline\ShoeShopOnline\ShoeShopOnline.Common\obj\Debug\ShoeShopOnline.Common.csproj.CoreCompileInputs.cache
+D:\đồ án\ShoeShopOnline\ShoeShopOnline\ShoeShopOnline.Common\obj\Debug\ShoeShopOnline.Common.dll
+D:\đồ án\ShoeShopOnline\ShoeShopOnline\ShoeShopOnline.Common\obj\Debug\ShoeShopOnline.Common.pdb
+D:\ShoeShopOnline\ShoeShopOnline.Common\bin\Debug\ShoeShopOnline.Common.dll
+D:\ShoeShopOnline\ShoeShopOnline.Common\bin\Debug\ShoeShopOnline.Common.pdb
+D:\ShoeShopOnline\ShoeShopOnline.Common\obj\Debug\ShoeShopOnline.Common.csprojAssemblyReference.cache
+D:\ShoeShopOnline\ShoeShopOnline.Common\obj\Debug\ShoeShopOnline.Common.csproj.CoreCompileInputs.cache
+D:\ShoeShopOnline\ShoeShopOnline.Common\obj\Debug\ShoeShopOnline.Common.dll
+D:\ShoeShopOnline\ShoeShopOnline.Common\obj\Debug\ShoeShopOnline.Common.pdb
+D:\.NET MVC\aspdotnetmyphamshop\ShoeShopOnline.Common\bin\Debug\ShoeShopOnline.Common.dll
+D:\.NET MVC\aspdotnetmyphamshop\ShoeShopOnline.Common\bin\Debug\ShoeShopOnline.Common.pdb
+D:\.NET MVC\aspdotnetmyphamshop\ShoeShopOnline.Common\obj\Debug\ShoeShopOnline.Common.csprojAssemblyReference.cache
+D:\.NET MVC\aspdotnetmyphamshop\ShoeShopOnline.Common\obj\Debug\ShoeShopOnline.Common.csproj.CoreCompileInputs.cache
+D:\.NET MVC\aspdotnetmyphamshop\ShoeShopOnline.Common\obj\Debug\ShoeShopOnline.Common.dll
+D:\.NET MVC\aspdotnetmyphamshop\ShoeShopOnline.Common\obj\Debug\ShoeShopOnline.Common.pdb
+C:\Users\nhann\Downloads\WEBSITE_khongduocxoa\aspdotnetmyphamshop\ShoeShopOnline.Common\bin\Debug\ShoeShopOnline.Common.dll
+C:\Users\nhann\Downloads\WEBSITE_khongduocxoa\aspdotnetmyphamshop\ShoeShopOnline.Common\bin\Debug\ShoeShopOnline.Common.pdb
+C:\Users\nhann\Downloads\WEBSITE_khongduocxoa\aspdotnetmyphamshop\ShoeShopOnline.Common\obj\Debug\ShoeShopOnline.Common.csproj.AssemblyReference.cache
+C:\Users\nhann\Downloads\WEBSITE_khongduocxoa\aspdotnetmyphamshop\ShoeShopOnline.Common\obj\Debug\ShoeShopOnline.Common.csproj.CoreCompileInputs.cache
+C:\Users\nhann\Downloads\WEBSITE_khongduocxoa\aspdotnetmyphamshop\ShoeShopOnline.Common\obj\Debug\ShoeShopOnline.Common.dll
+C:\Users\nhann\Downloads\WEBSITE_khongduocxoa\aspdotnetmyphamshop\ShoeShopOnline.Common\obj\Debug\ShoeShopOnline.Common.pdb
+C:\Users\itvip\Downloads\aspdotnetmyphamshop\aspdotnetmyphamshop\ShoeShopOnline.Common\bin\Debug\ShoeShopOnline.Common.dll
+C:\Users\itvip\Downloads\aspdotnetmyphamshop\aspdotnetmyphamshop\ShoeShopOnline.Common\bin\Debug\ShoeShopOnline.Common.pdb
+C:\Users\itvip\Downloads\aspdotnetmyphamshop\aspdotnetmyphamshop\ShoeShopOnline.Common\obj\Debug\ShoeShopOnline.Common.csproj.AssemblyReference.cache
+C:\Users\itvip\Downloads\aspdotnetmyphamshop\aspdotnetmyphamshop\ShoeShopOnline.Common\obj\Debug\ShoeShopOnline.Common.csproj.CoreCompileInputs.cache
+C:\Users\itvip\Downloads\aspdotnetmyphamshop\aspdotnetmyphamshop\ShoeShopOnline.Common\obj\Debug\ShoeShopOnline.Common.dll
+C:\Users\itvip\Downloads\aspdotnetmyphamshop\aspdotnetmyphamshop\ShoeShopOnline.Common\obj\Debug\ShoeShopOnline.Common.pdb

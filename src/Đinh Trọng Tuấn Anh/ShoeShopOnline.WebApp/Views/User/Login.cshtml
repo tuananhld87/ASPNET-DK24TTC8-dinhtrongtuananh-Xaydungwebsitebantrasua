@@ -1,0 +1,44 @@
+﻿@model ShoeShopOnline.WebApp.Models.LoginModel
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!--start-account-->
+<div class="account">
+    <div class="container">
+        <div class="account-bottom">
+            <div class="col-md-3"></div>
+            <div class="col-md-6 account-left">
+                @using (Html.BeginForm("Login", "User", FormMethod.Post))
+                {
+                    @Html.AntiForgeryToken()
+                    <form>
+                        <div class="account-top heading">
+                            <h3>Đăng nhập</h3>
+                        </div>
+                        @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+
+                        <div class="address">
+                            <span>Tên đăng nhập</span>
+                            @Html.TextBoxFor(model => model.UserName, new { })
+
+                        </div>
+                        <div class="address">
+                            <span>Mật khẩu</span>
+                            @Html.PasswordFor(model => model.Password, new { })
+                        </div>
+                        <div class="address">
+                            
+                            <input type="submit" value="Đăng nhập">
+                            
+                        </div>
+                    </form>
+                }
+                <div class="clearfix"> </div>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+    </div>
+</div>
+<!--end-account-->

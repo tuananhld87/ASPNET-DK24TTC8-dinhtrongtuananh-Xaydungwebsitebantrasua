@@ -1,0 +1,27 @@
+﻿@model IEnumerable<ShoeShopOnline.Model.DAL.About>
+@{
+    ViewBag.Title = "Giới thiệu";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!--start-breadcrumbs-->
+<div class="breadcrumbs">
+    <div class="container">
+        <div class="breadcrumbs-main">
+            <ol class="breadcrumb">
+                <li><a href="/trang-chu">Trang chủ</a></li>
+                <li class="active">@ViewBag.Title</li>
+            </ol>
+        </div>
+    </div>
+</div>
+<!--end-breadcrumbs-->
+<div class="contact">
+    <div class="container">
+        @foreach (var item in Model)
+        {
+            @Html.Raw(item.Content)
+        }
+    </div>
+</div>
+
+

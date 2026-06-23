@@ -1,0 +1,32 @@
+﻿@model ShoeShopOnline.Model.DAL.News
+
+@{
+    Layout = null;
+}
+<div class="modal fade" id="MyModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Chi tiết tin tức</h4>
+            </div>
+            <div class="modal-body">
+                <h4 class="text-center">
+                    @Model.Name
+                </h4>
+                <p>Đăng bởi: @Model.CreatedBy [Ngày: @Model.CreatedOn.ToString()]</p>
+                @Html.Raw(Model.Description)
+            </div>
+            <!-- /.modal-body -->
+            <div class="modal-footer">
+                <div class="form-actions no-color text-center">
+                    <a href="/quan-tri/tin-tuc/cap-nhat?id=@Model.Id" class="btn-sm btn-group-sm btn-primary"><i class="far fa-edit"></i>Sửa</a>
+                    <button type="button" class="btn btn-sm btn-secondary" style=" border: 0.5px solid #a8a9ad;" data-dismiss="modal">Thoát</button>
+                </div>
+            </div>
+            <!-- /.modal-footer -->
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->

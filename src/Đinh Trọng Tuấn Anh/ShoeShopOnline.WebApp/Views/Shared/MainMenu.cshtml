@@ -1,0 +1,18 @@
+﻿@model List<ShoeShopOnline.Model.DAL.Menu>
+
+<div class="header-bottom">
+    <div class="container">
+        <div class="top-nav">
+            <ul class="memenu skyblue">
+                @foreach (var item in Model)
+                {
+                    <li class="grid">
+                        <a href="@item.Link" target="@item.Target">@item.MenuName</a>
+                        @{ Html.RenderAction("SubMenu", "Homes", new { ParentId = item.Id});}
+                    </li>
+                }
+            </ul>
+        </div>
+        <div class="clearfix"> </div>
+    </div>
+</div>

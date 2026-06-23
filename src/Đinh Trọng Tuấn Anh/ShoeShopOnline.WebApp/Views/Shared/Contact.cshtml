@@ -1,0 +1,150 @@
+﻿@model IEnumerable<ShoeShopOnline.Model.DAL.Contact>
+
+@* Bỏ check ViewBag, chỉ cần check Model khác null là đủ an toàn *@
+@if (Model != null)
+{
+    <style>
+        .modern-footer {
+            background-color: #2c3e50; /* Nền xanh đen sang trọng */
+            color: #ecf0f1;
+            padding: 50px 0 30px;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            margin-top: 40px;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: space-between;
+        }
+
+        .footer-col {
+            flex: 1;
+            min-width: 280px; /* Chống méo trên màn hình nhỏ */
+            margin-bottom: 20px;
+        }
+
+        .footer-title {
+            font-size: 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+            color: #f1c40f; /* Màu chữ vàng accent nổi bật */
+        }
+
+        /* Gạch chân trang trí dưới tiêu đề */
+        .footer-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 3px;
+            background-color: #ff4757; 
+        }
+
+        .footer-contact-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-contact-list li {
+            margin-bottom: 15px;
+            font-size: 15px;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            line-height: 1.5;
+        }
+
+        .footer-contact-list i {
+            color: #f1c40f;
+            margin-top: 3px;
+            width: 20px;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        .footer-contact-list a {
+            color: #bdc3c7;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-contact-list a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+
+        .map-container {
+            width: 100%;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 200px;
+            border: none;
+        }
+
+        /* Responsive cho điện thoại */
+        @@media (max-width: 768px) {
+            .footer-container {
+                flex-direction: column;
+            }
+        }
+    </style>
+
+    <footer class="modern-footer" id="Contact">
+        <div class="footer-container">
+            
+            @* Cột chứa thông tin liên hệ sinh ra từ Database *@
+            @foreach (var item in Model)
+            {
+                <div class="footer-col">
+                    <h3 class="footer-title">@item.Title</h3>
+                    <ul class="footer-contact-list">
+                        <li>
+                            <i class="fa fa-building"></i>
+                            <strong>@item.ObjectName</strong>
+                        </li>
+                        <li>
+                            <i class="fa fa-map-marker-alt"></i>
+                            <span>@item.Address</span>
+                        </li>
+                        <li>
+                            <i class="fa fa-phone"></i>
+                            <span><a href="tel:@item.Mobile">@item.Mobile</a></span>
+                        </li>
+                        <li>
+                            <i class="fa fa-globe"></i>
+                            <span><a href="@item.Website" target="_blank">@item.Website</a></span>
+                        </li>
+                        <li>
+                            <i class="fa fa-envelope"></i>
+                            <span><a href="mailto:@item.Email">@item.Email</a></span>
+                        </li>
+                    </ul>
+                </div>
+            }
+
+            @* Cột chứa Bản đồ *@
+            <div class="footer-col">
+                <h3 class="footer-title">Bản Đồ</h3>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3930.126136853947!2d106.34393900850249!3d9.92345159013711!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a0175ea296facb%3A0x55ded92e29068221!2zVHLGsOG7nW5nIMSQ4bqhaSBI4buNYyBUcsOgIFZpbmg!5e0!3m2!1svi!2s!4v1775876911671!5m2!1svi!2s" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+            
+        </div>
+    </footer>
+}

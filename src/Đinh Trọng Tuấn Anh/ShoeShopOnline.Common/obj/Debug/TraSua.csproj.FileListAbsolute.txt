@@ -1,0 +1,18 @@
+C:\Users\Admin\Downloads\2001210940_Doan_LTWeb\2001210940_Doan_LTWeb\2001210940_Doan_LTWeb\SHOP\ShoeShopOnline.Common\bin\Debug\ShoeShopOnline.Common.dll
+C:\Users\Admin\Downloads\2001210940_Doan_LTWeb\2001210940_Doan_LTWeb\2001210940_Doan_LTWeb\SHOP\ShoeShopOnline.Common\bin\Debug\ShoeShopOnline.Common.pdb
+C:\Users\Admin\Downloads\2001210940_Doan_LTWeb\2001210940_Doan_LTWeb\2001210940_Doan_LTWeb\SHOP\ShoeShopOnline.Common\obj\Debug\TraSua.csproj.AssemblyReference.cache
+C:\Users\Admin\Downloads\2001210940_Doan_LTWeb\2001210940_Doan_LTWeb\2001210940_Doan_LTWeb\SHOP\ShoeShopOnline.Common\obj\Debug\TraSua.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Downloads\2001210940_Doan_LTWeb\2001210940_Doan_LTWeb\2001210940_Doan_LTWeb\SHOP\ShoeShopOnline.Common\obj\Debug\ShoeShopOnline.Common.dll
+C:\Users\Admin\Downloads\2001210940_Doan_LTWeb\2001210940_Doan_LTWeb\2001210940_Doan_LTWeb\SHOP\ShoeShopOnline.Common\obj\Debug\ShoeShopOnline.Common.pdb
+C:\Users\Admin\Downloads\Web trà sữa\Web trà sữa\ShoeShopOnline.Common\bin\Debug\ShoeShopOnline.Common.dll
+C:\Users\Admin\Downloads\Web trà sữa\Web trà sữa\ShoeShopOnline.Common\bin\Debug\ShoeShopOnline.Common.pdb
+C:\Users\Admin\Downloads\Web trà sữa\Web trà sữa\ShoeShopOnline.Common\obj\Debug\TraSua.csproj.AssemblyReference.cache
+C:\Users\Admin\Downloads\Web trà sữa\Web trà sữa\ShoeShopOnline.Common\obj\Debug\TraSua.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Downloads\Web trà sữa\Web trà sữa\ShoeShopOnline.Common\obj\Debug\ShoeShopOnline.Common.dll
+C:\Users\Admin\Downloads\Web trà sữa\Web trà sữa\ShoeShopOnline.Common\obj\Debug\ShoeShopOnline.Common.pdb
+C:\Users\Admin\Downloads\BachXuanLan\Đinh Trọng Tuấn Anh\ShoeShopOnline.Common\bin\Debug\ShoeShopOnline.Common.dll
+C:\Users\Admin\Downloads\BachXuanLan\Đinh Trọng Tuấn Anh\ShoeShopOnline.Common\bin\Debug\ShoeShopOnline.Common.pdb
+C:\Users\Admin\Downloads\BachXuanLan\Đinh Trọng Tuấn Anh\ShoeShopOnline.Common\obj\Debug\TraSua.csproj.AssemblyReference.cache
+C:\Users\Admin\Downloads\BachXuanLan\Đinh Trọng Tuấn Anh\ShoeShopOnline.Common\obj\Debug\TraSua.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Downloads\BachXuanLan\Đinh Trọng Tuấn Anh\ShoeShopOnline.Common\obj\Debug\ShoeShopOnline.Common.dll
+C:\Users\Admin\Downloads\BachXuanLan\Đinh Trọng Tuấn Anh\ShoeShopOnline.Common\obj\Debug\ShoeShopOnline.Common.pdb

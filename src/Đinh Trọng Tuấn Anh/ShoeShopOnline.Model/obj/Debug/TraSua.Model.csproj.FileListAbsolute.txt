@@ -1,0 +1,96 @@
+C:\Users\Admin\Downloads\2001210940_Doan_LTWeb\2001210940_Doan_LTWeb\2001210940_Doan_LTWeb\SHOP\ShoeShopOnline.Model\bin\Debug\ShoeShopOnline.Model.dll.config
+C:\Users\Admin\Downloads\2001210940_Doan_LTWeb\2001210940_Doan_LTWeb\2001210940_Doan_LTWeb\SHOP\ShoeShopOnline.Model\bin\Debug\ShoeShopOnline.Model.dll
+C:\Users\Admin\Downloads\2001210940_Doan_LTWeb\2001210940_Doan_LTWeb\2001210940_Doan_LTWeb\SHOP\ShoeShopOnline.Model\bin\Debug\ShoeShopOnline.Model.pdb
+C:\Users\Admin\Downloads\2001210940_Doan_LTWeb\2001210940_Doan_LTWeb\2001210940_Doan_LTWeb\SHOP\ShoeShopOnline.Model\bin\Debug\EntityFramework.dll
+C:\Users\Admin\Downloads\2001210940_Doan_LTWeb\2001210940_Doan_LTWeb\2001210940_Doan_LTWeb\SHOP\ShoeShopOnline.Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Admin\Downloads\2001210940_Doan_LTWeb\2001210940_Doan_LTWeb\2001210940_Doan_LTWeb\SHOP\ShoeShopOnline.Model\bin\Debug\Microsoft.Owin.dll
+C:\Users\Admin\Downloads\2001210940_Doan_LTWeb\2001210940_Doan_LTWeb\2001210940_Doan_LTWeb\SHOP\ShoeShopOnline.Model\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Admin\Downloads\2001210940_Doan_LTWeb\2001210940_Doan_LTWeb\2001210940_Doan_LTWeb\SHOP\ShoeShopOnline.Model\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\Admin\Downloads\2001210940_Doan_LTWeb\2001210940_Doan_LTWeb\2001210940_Doan_LTWeb\SHOP\ShoeShopOnline.Model\bin\Debug\Owin.dll
+C:\Users\Admin\Downloads\2001210940_Doan_LTWeb\2001210940_Doan_LTWeb\2001210940_Doan_LTWeb\SHOP\ShoeShopOnline.Model\bin\Debug\ShoeShopOnline.Common.dll
+C:\Users\Admin\Downloads\2001210940_Doan_LTWeb\2001210940_Doan_LTWeb\2001210940_Doan_LTWeb\SHOP\ShoeShopOnline.Model\bin\Debug\System.Web.Helpers.dll
+C:\Users\Admin\Downloads\2001210940_Doan_LTWeb\2001210940_Doan_LTWeb\2001210940_Doan_LTWeb\SHOP\ShoeShopOnline.Model\bin\Debug\System.Web.Mvc.dll
+C:\Users\Admin\Downloads\2001210940_Doan_LTWeb\2001210940_Doan_LTWeb\2001210940_Doan_LTWeb\SHOP\ShoeShopOnline.Model\bin\Debug\System.Web.Razor.dll
+C:\Users\Admin\Downloads\2001210940_Doan_LTWeb\2001210940_Doan_LTWeb\2001210940_Doan_LTWeb\SHOP\ShoeShopOnline.Model\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\Admin\Downloads\2001210940_Doan_LTWeb\2001210940_Doan_LTWeb\2001210940_Doan_LTWeb\SHOP\ShoeShopOnline.Model\bin\Debug\System.Web.WebPages.dll
+C:\Users\Admin\Downloads\2001210940_Doan_LTWeb\2001210940_Doan_LTWeb\2001210940_Doan_LTWeb\SHOP\ShoeShopOnline.Model\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\Admin\Downloads\2001210940_Doan_LTWeb\2001210940_Doan_LTWeb\2001210940_Doan_LTWeb\SHOP\ShoeShopOnline.Model\bin\Debug\ShoeShopOnline.Common.pdb
+C:\Users\Admin\Downloads\2001210940_Doan_LTWeb\2001210940_Doan_LTWeb\2001210940_Doan_LTWeb\SHOP\ShoeShopOnline.Model\bin\Debug\EntityFramework.xml
+C:\Users\Admin\Downloads\2001210940_Doan_LTWeb\2001210940_Doan_LTWeb\2001210940_Doan_LTWeb\SHOP\ShoeShopOnline.Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Admin\Downloads\2001210940_Doan_LTWeb\2001210940_Doan_LTWeb\2001210940_Doan_LTWeb\SHOP\ShoeShopOnline.Model\bin\Debug\Microsoft.Owin.xml
+C:\Users\Admin\Downloads\2001210940_Doan_LTWeb\2001210940_Doan_LTWeb\2001210940_Doan_LTWeb\SHOP\ShoeShopOnline.Model\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Admin\Downloads\2001210940_Doan_LTWeb\2001210940_Doan_LTWeb\2001210940_Doan_LTWeb\SHOP\ShoeShopOnline.Model\bin\Debug\System.Web.Helpers.xml
+C:\Users\Admin\Downloads\2001210940_Doan_LTWeb\2001210940_Doan_LTWeb\2001210940_Doan_LTWeb\SHOP\ShoeShopOnline.Model\bin\Debug\System.Web.Mvc.xml
+C:\Users\Admin\Downloads\2001210940_Doan_LTWeb\2001210940_Doan_LTWeb\2001210940_Doan_LTWeb\SHOP\ShoeShopOnline.Model\bin\Debug\System.Web.Razor.xml
+C:\Users\Admin\Downloads\2001210940_Doan_LTWeb\2001210940_Doan_LTWeb\2001210940_Doan_LTWeb\SHOP\ShoeShopOnline.Model\bin\Debug\System.Web.WebPages.xml
+C:\Users\Admin\Downloads\2001210940_Doan_LTWeb\2001210940_Doan_LTWeb\2001210940_Doan_LTWeb\SHOP\ShoeShopOnline.Model\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\Admin\Downloads\2001210940_Doan_LTWeb\2001210940_Doan_LTWeb\2001210940_Doan_LTWeb\SHOP\ShoeShopOnline.Model\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\Admin\Downloads\2001210940_Doan_LTWeb\2001210940_Doan_LTWeb\2001210940_Doan_LTWeb\SHOP\ShoeShopOnline.Model\obj\Debug\TraSua.Model.csproj.AssemblyReference.cache
+C:\Users\Admin\Downloads\2001210940_Doan_LTWeb\2001210940_Doan_LTWeb\2001210940_Doan_LTWeb\SHOP\ShoeShopOnline.Model\obj\Debug\TraSua.Model.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Downloads\2001210940_Doan_LTWeb\2001210940_Doan_LTWeb\2001210940_Doan_LTWeb\SHOP\ShoeShopOnline.Model\obj\Debug\TraSua.M.796B8BAB.Up2Date
+C:\Users\Admin\Downloads\2001210940_Doan_LTWeb\2001210940_Doan_LTWeb\2001210940_Doan_LTWeb\SHOP\ShoeShopOnline.Model\obj\Debug\ShoeShopOnline.Model.dll
+C:\Users\Admin\Downloads\2001210940_Doan_LTWeb\2001210940_Doan_LTWeb\2001210940_Doan_LTWeb\SHOP\ShoeShopOnline.Model\obj\Debug\ShoeShopOnline.Model.pdb
+C:\Users\Admin\Downloads\Web trà sữa\Web trà sữa\ShoeShopOnline.Model\bin\Debug\ShoeShopOnline.Model.dll.config
+C:\Users\Admin\Downloads\Web trà sữa\Web trà sữa\ShoeShopOnline.Model\bin\Debug\ShoeShopOnline.Model.dll
+C:\Users\Admin\Downloads\Web trà sữa\Web trà sữa\ShoeShopOnline.Model\bin\Debug\ShoeShopOnline.Model.pdb
+C:\Users\Admin\Downloads\Web trà sữa\Web trà sữa\ShoeShopOnline.Model\bin\Debug\EntityFramework.dll
+C:\Users\Admin\Downloads\Web trà sữa\Web trà sữa\ShoeShopOnline.Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Admin\Downloads\Web trà sữa\Web trà sữa\ShoeShopOnline.Model\bin\Debug\Microsoft.Owin.dll
+C:\Users\Admin\Downloads\Web trà sữa\Web trà sữa\ShoeShopOnline.Model\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Admin\Downloads\Web trà sữa\Web trà sữa\ShoeShopOnline.Model\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\Admin\Downloads\Web trà sữa\Web trà sữa\ShoeShopOnline.Model\bin\Debug\Owin.dll
+C:\Users\Admin\Downloads\Web trà sữa\Web trà sữa\ShoeShopOnline.Model\bin\Debug\ShoeShopOnline.Common.dll
+C:\Users\Admin\Downloads\Web trà sữa\Web trà sữa\ShoeShopOnline.Model\bin\Debug\System.Web.Helpers.dll
+C:\Users\Admin\Downloads\Web trà sữa\Web trà sữa\ShoeShopOnline.Model\bin\Debug\System.Web.Mvc.dll
+C:\Users\Admin\Downloads\Web trà sữa\Web trà sữa\ShoeShopOnline.Model\bin\Debug\System.Web.Razor.dll
+C:\Users\Admin\Downloads\Web trà sữa\Web trà sữa\ShoeShopOnline.Model\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\Admin\Downloads\Web trà sữa\Web trà sữa\ShoeShopOnline.Model\bin\Debug\System.Web.WebPages.dll
+C:\Users\Admin\Downloads\Web trà sữa\Web trà sữa\ShoeShopOnline.Model\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\Admin\Downloads\Web trà sữa\Web trà sữa\ShoeShopOnline.Model\bin\Debug\ShoeShopOnline.Common.pdb
+C:\Users\Admin\Downloads\Web trà sữa\Web trà sữa\ShoeShopOnline.Model\bin\Debug\EntityFramework.xml
+C:\Users\Admin\Downloads\Web trà sữa\Web trà sữa\ShoeShopOnline.Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Admin\Downloads\Web trà sữa\Web trà sữa\ShoeShopOnline.Model\bin\Debug\Microsoft.Owin.xml
+C:\Users\Admin\Downloads\Web trà sữa\Web trà sữa\ShoeShopOnline.Model\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Admin\Downloads\Web trà sữa\Web trà sữa\ShoeShopOnline.Model\bin\Debug\System.Web.Helpers.xml
+C:\Users\Admin\Downloads\Web trà sữa\Web trà sữa\ShoeShopOnline.Model\bin\Debug\System.Web.Mvc.xml
+C:\Users\Admin\Downloads\Web trà sữa\Web trà sữa\ShoeShopOnline.Model\bin\Debug\System.Web.Razor.xml
+C:\Users\Admin\Downloads\Web trà sữa\Web trà sữa\ShoeShopOnline.Model\bin\Debug\System.Web.WebPages.xml
+C:\Users\Admin\Downloads\Web trà sữa\Web trà sữa\ShoeShopOnline.Model\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\Admin\Downloads\Web trà sữa\Web trà sữa\ShoeShopOnline.Model\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\Admin\Downloads\Web trà sữa\Web trà sữa\ShoeShopOnline.Model\obj\Debug\TraSua.Model.csproj.AssemblyReference.cache
+C:\Users\Admin\Downloads\Web trà sữa\Web trà sữa\ShoeShopOnline.Model\obj\Debug\TraSua.Model.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Downloads\Web trà sữa\Web trà sữa\ShoeShopOnline.Model\obj\Debug\TraSua.M.796B8BAB.Up2Date
+C:\Users\Admin\Downloads\Web trà sữa\Web trà sữa\ShoeShopOnline.Model\obj\Debug\ShoeShopOnline.Model.dll
+C:\Users\Admin\Downloads\Web trà sữa\Web trà sữa\ShoeShopOnline.Model\obj\Debug\ShoeShopOnline.Model.pdb
+C:\Users\Admin\Downloads\BachXuanLan\Đinh Trọng Tuấn Anh\ShoeShopOnline.Model\bin\Debug\ShoeShopOnline.Model.dll.config
+C:\Users\Admin\Downloads\BachXuanLan\Đinh Trọng Tuấn Anh\ShoeShopOnline.Model\bin\Debug\ShoeShopOnline.Model.dll
+C:\Users\Admin\Downloads\BachXuanLan\Đinh Trọng Tuấn Anh\ShoeShopOnline.Model\bin\Debug\ShoeShopOnline.Model.pdb
+C:\Users\Admin\Downloads\BachXuanLan\Đinh Trọng Tuấn Anh\ShoeShopOnline.Model\bin\Debug\EntityFramework.dll
+C:\Users\Admin\Downloads\BachXuanLan\Đinh Trọng Tuấn Anh\ShoeShopOnline.Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Admin\Downloads\BachXuanLan\Đinh Trọng Tuấn Anh\ShoeShopOnline.Model\bin\Debug\Microsoft.Owin.dll
+C:\Users\Admin\Downloads\BachXuanLan\Đinh Trọng Tuấn Anh\ShoeShopOnline.Model\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Admin\Downloads\BachXuanLan\Đinh Trọng Tuấn Anh\ShoeShopOnline.Model\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\Admin\Downloads\BachXuanLan\Đinh Trọng Tuấn Anh\ShoeShopOnline.Model\bin\Debug\Owin.dll
+C:\Users\Admin\Downloads\BachXuanLan\Đinh Trọng Tuấn Anh\ShoeShopOnline.Model\bin\Debug\ShoeShopOnline.Common.dll
+C:\Users\Admin\Downloads\BachXuanLan\Đinh Trọng Tuấn Anh\ShoeShopOnline.Model\bin\Debug\System.Web.Helpers.dll
+C:\Users\Admin\Downloads\BachXuanLan\Đinh Trọng Tuấn Anh\ShoeShopOnline.Model\bin\Debug\System.Web.Mvc.dll
+C:\Users\Admin\Downloads\BachXuanLan\Đinh Trọng Tuấn Anh\ShoeShopOnline.Model\bin\Debug\System.Web.Razor.dll
+C:\Users\Admin\Downloads\BachXuanLan\Đinh Trọng Tuấn Anh\ShoeShopOnline.Model\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\Admin\Downloads\BachXuanLan\Đinh Trọng Tuấn Anh\ShoeShopOnline.Model\bin\Debug\System.Web.WebPages.dll
+C:\Users\Admin\Downloads\BachXuanLan\Đinh Trọng Tuấn Anh\ShoeShopOnline.Model\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\Admin\Downloads\BachXuanLan\Đinh Trọng Tuấn Anh\ShoeShopOnline.Model\bin\Debug\ShoeShopOnline.Common.pdb
+C:\Users\Admin\Downloads\BachXuanLan\Đinh Trọng Tuấn Anh\ShoeShopOnline.Model\bin\Debug\EntityFramework.xml
+C:\Users\Admin\Downloads\BachXuanLan\Đinh Trọng Tuấn Anh\ShoeShopOnline.Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Admin\Downloads\BachXuanLan\Đinh Trọng Tuấn Anh\ShoeShopOnline.Model\bin\Debug\Microsoft.Owin.xml
+C:\Users\Admin\Downloads\BachXuanLan\Đinh Trọng Tuấn Anh\ShoeShopOnline.Model\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Admin\Downloads\BachXuanLan\Đinh Trọng Tuấn Anh\ShoeShopOnline.Model\bin\Debug\System.Web.Helpers.xml
+C:\Users\Admin\Downloads\BachXuanLan\Đinh Trọng Tuấn Anh\ShoeShopOnline.Model\bin\Debug\System.Web.Mvc.xml
+C:\Users\Admin\Downloads\BachXuanLan\Đinh Trọng Tuấn Anh\ShoeShopOnline.Model\bin\Debug\System.Web.Razor.xml
+C:\Users\Admin\Downloads\BachXuanLan\Đinh Trọng Tuấn Anh\ShoeShopOnline.Model\bin\Debug\System.Web.WebPages.xml
+C:\Users\Admin\Downloads\BachXuanLan\Đinh Trọng Tuấn Anh\ShoeShopOnline.Model\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\Admin\Downloads\BachXuanLan\Đinh Trọng Tuấn Anh\ShoeShopOnline.Model\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\Admin\Downloads\BachXuanLan\Đinh Trọng Tuấn Anh\ShoeShopOnline.Model\obj\Debug\TraSua.Model.csproj.AssemblyReference.cache
+C:\Users\Admin\Downloads\BachXuanLan\Đinh Trọng Tuấn Anh\ShoeShopOnline.Model\obj\Debug\TraSua.Model.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Downloads\BachXuanLan\Đinh Trọng Tuấn Anh\ShoeShopOnline.Model\obj\Debug\TraSua.M.796B8BAB.Up2Date
+C:\Users\Admin\Downloads\BachXuanLan\Đinh Trọng Tuấn Anh\ShoeShopOnline.Model\obj\Debug\ShoeShopOnline.Model.dll
+C:\Users\Admin\Downloads\BachXuanLan\Đinh Trọng Tuấn Anh\ShoeShopOnline.Model\obj\Debug\ShoeShopOnline.Model.pdb

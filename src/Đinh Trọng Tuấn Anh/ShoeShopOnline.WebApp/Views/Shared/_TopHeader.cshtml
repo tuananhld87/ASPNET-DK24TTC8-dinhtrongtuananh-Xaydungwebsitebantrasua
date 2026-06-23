@@ -1,0 +1,105 @@
+﻿@{
+    var session = (ShoeShopOnline.Common.UserLogin)Session[ShoeShopOnline.Common.CommonConstants.USER_SESSION];
+}
+
+<div class="top-component">
+    <div class="float-left">
+    </div>
+    <div class="float-right">
+        @if (session == null)
+        {
+            <a href="/dang-ky" class="nav-link">Đăng ký</a>
+            <a href="/dang-nhap" class="nav-link">Đăng nhập</a>
+        }
+        else
+        {
+            <a href="@Url.Action("Logout", "User")" class="nav-link" data-toggle="tooltip" title="Đăng xuất"><i class="fas fa-sign-out-alt"></i></a>
+            <a href="/ho-so-nguoi-dung?id=@session.UserId" data-toggle="tooltip" title="Hồ sơ người dùng" class="nav-link dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="text-danger"><span class="text-primary">Xin chào:</span> @session.UserName</span>
+            </a>
+        }
+    </div>
+</div>
+
+<div class="top-header">
+    <div class="container">
+        <div class="top-header-main">
+            <!-- Tìm kiếm -->
+            <div class="col-md-4 top-header-left">
+                <div class="search-bar">
+                    <form action="/tim-kiem" method="get">
+                        <input type="text" value="@ViewBag.Keyword" name="keyword" id="txtKeyword" placeholder="Tìm kiếm">
+                        <input type="submit" value="">
+                    </form>
+                </div>
+            </div>
+
+            <!-- Logo đã chỉnh sửa gọn và không xuống hàng -->
+            <div class="col-md-4 top-header-middle">
+                <a href="/trang-chu" class="logo-box">
+                    <span class="logo-text">ĐINH TRỌNG TUẤN ANH</span>
+                </a>
+            </div>
+
+            <!-- Giỏ hàng -->
+            <div class="col-md-4 top-header-right">
+                @if (session != null)
+                {
+                    Html.RenderAction("HeaderCart", "Homes");
+                }
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* CSS cho hộp Logo */
+    .logo-box {
+        display: inline-block;
+        padding: 5px 15px; /* Giảm padding để khung nhỏ gọn hơn */
+        text-decoration: none;
+        border: 2px solid #ff4757;
+        border-radius: 8px;
+        position: relative;
+        white-space: nowrap; /* Ép chữ nằm trên một hàng */
+        margin-top: 5px;
+    }
+
+    .logo-text {
+        color: #ff4757;
+        font-size: 18px; /* Giảm font-size để nằm vừa trên 1 dòng */
+        font-weight: 800;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    /* Hiệu ứng ngôi sao lấp lánh */
+    .logo-box::after {
+        content: "✦";
+        position: absolute;
+        color: #f1c40f;
+        font-size: 15px;
+        top: -8px;
+        right: -8px;
+        animation: sparkle 1.5s infinite;
+    }
+
+    .logo-box::before {
+        content: "✧";
+        position: absolute;
+        color: #ff4757;
+        font-size: 12px;
+        bottom: -5px;
+        left: -5px;
+        animation: sparkle 1.5s infinite 0.5s;
+    }
+
+    /* Dùng @@ để tránh lỗi Razor */
+    @@keyframes sparkle {
+        0% { transform: scale(1); opacity: 1; }
+        50% { transform: scale(1.2); opacity: 0.5; }
+        100% { transform: scale(1); opacity: 1; }
+    }
+</style>

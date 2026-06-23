@@ -1,0 +1,79 @@
+﻿@model IEnumerable<ShoeShopOnline.Model.DAL.Contact>
+
+@{
+    ViewBag.Title = "Thông tin cửa hàng";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<!-- DataTales Example -->
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">@ViewBag.Title</h6>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <p>
+                    <a href="/quan-tri/thong-tin-cua-hang/them-moi" class="btn btn-group-sm btn-primary text-decoration-none"><i class="fa fa-plus"></i> Thêm mới</a>
+                </p>
+                <thead>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Title)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.ObjectName)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Address)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Mobile)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Website)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Email)
+                        </th>
+                        <th class="text-center" style="width: 115px;"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Title)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ObjectName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Address)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Mobile)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Website)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Email)
+                            </td>
+                            <td class="text-sm-center">
+                                <a href="/quan-tri/thong-tin-cua-hang/cap-nhat?id=@item.Id" class="btn-sm btn-group-sm btn-success"><i class="far fa-edit"></i></a>
+                                <a href="@Url.Action("Details",new { id = item.Id})" class="btn-sm btn-group-sm btn-secondary dialog-link"><i class="fas fa-info"></i></a>
+                                <a href="@Url.Action("Delete",new { id = item.Id})" class="btn-sm btn-group-sm btn-danger dialog-link"><i class="far fa-trash-alt"></i></a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            @if (Model.Count() <= 0)
+            {
+                <div class="text-center">Không có dữ liệu</div>
+            }
+        </div>
+    </div>
+</div>

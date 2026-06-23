@@ -1,0 +1,76 @@
+﻿@model ShoeShopOnline.Model.DAL.Feedback
+@{
+    ViewBag.Title = "Góp ý từ khách hàng";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!--start-breadcrumbs-->
+<div class="breadcrumbs">
+    <div class="container">
+        <div class="breadcrumbs-main">
+            <ol class="breadcrumb">
+                <li><a href="/trang-chu">Trang chủ</a></li>
+                <li class="active">@ViewBag.Title</li>
+            </ol>
+        </div>
+    </div>
+</div>
+<!--end-breadcrumbs-->
+<!--start-contact-->
+@using (Html.BeginForm("ContactFromCustomer", "FeedBack", FormMethod.Post))
+{
+    <div class="contact">
+        <div class="container">
+            <div class="contact-top heading">
+                <h3>@ViewBag.Title</h3>
+            </div>
+            <div class="contact-bottom">
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="col-md-6 contact-left">
+                    @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                    @Html.TextBoxFor(model => model.Name, new
+                    {
+                        @type = "text",
+                        @placeholder = "Họ và tên",
+                        @required = "required",
+                        @oninvalid = "this.setCustomValidity('Bạn chưa nhập tên')",
+                        @oninput = "this.setCustomValidity('')"
+                    })
+
+                    @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                    @Html.TextBoxFor(model => model.Email, new
+                    {
+                        @type = "text",
+                        @placeholder = "Email",
+                        @required = "required",
+                        @oninvalid = "this.setCustomValidity('Bạn chưa nhập email')",
+                        @oninput = "this.setCustomValidity('')"
+                    })
+
+                    @Html.ValidationMessageFor(model => model.Phone, "", new { @class = "text-danger" })
+                    @Html.TextBoxFor(model => model.Phone, new
+                    {
+                        @type = "text",
+                        @placeholder = "Số điện thoại",
+                        @required = "required",
+                        @oninvalid = "this.setCustomValidity('Bạn chưa nhập số điện thoại')",
+                        @oninput = "this.setCustomValidity('')"
+                    })
+
+                    @Html.TextBoxFor(model => model.Address, new { @type = "text", @placeholder = "Địa chỉ" })
+                    @Html.ValidationMessageFor(model => model.Address, "", new { @class = "text-danger" })
+                </div>
+                <div class="col-md-6 contact-left">
+                    @Html.TextAreaFor(model => model.Content, new { @placeholder = "Nội dung", @required ="required",
+                        @oninvalid ="this.setCustomValidity('Bạn chưa nhập nội dung')",
+                        @oninput="this.setCustomValidity('')" })
+                    <input type="submit" value="GỬI">
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+
+}
+<!--end-contact-->

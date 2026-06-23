@@ -1,0 +1,71 @@
+﻿@model PagedList.IPagedList<ShoeShopOnline.Model.DAL.Product>
+@using PagedList.Mvc;
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+@{
+    ViewBag.Title = "Xem tất cả sản phẩm";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!--start-breadcrumbs-->
+<div class="breadcrumbs">
+    <div class="container">
+        <div class="breadcrumbs-main">
+            <ol class="breadcrumb">
+                <li><a href="/trang-chu">Trang chủ</a></li>
+                <li class="active">@ViewBag.Title</li>
+            </ol>
+        </div>
+    </div>
+</div>
+<!--end-breadcrumbs-->
+<!--start-single-->
+<div class="single contact">
+    <div class="container">
+        <div class="single-main">
+            <div class="col-md-10 single-main-left">
+                <div class="sngl-top">
+                    @if ((int)ViewBag.Count > 0)
+                    {
+                        foreach (var item in Model)
+                        {
+                            var url = "/chi-tiet-san-pham/" + item.MetaTitle + "/" + item.Id;
+
+                            <div class="col-md-4 product-left" style="margin-top: 20px;">
+                                <div class="p-one simpleCart_shelfItem" style="height:410px;">
+                                    <a href="@url">
+                                        <img src="@item.UrlImage" alt="" height="230" width="223" />
+                                        <div class="mask">
+                                            <span>Xem chi tiết</span>
+                                        </div>
+                                    </a>
+                                    <h4>@item.Name</h4>
+                                    @if (item.PromotionPrice > 0)
+                                    {
+                                        <p><a class="" href="#"><span class=""><strike>@(item.Price.Value.ToString("N0"))</strike></span></a></p> <br />
+                                        <p><a class="item_add" href="/them-gio-hang?productId=@item.Id&quantity=1"><i></i> <span class=" item_price">@(item.PromotionPrice.Value.ToString("N0"))</span></a></p>
+                                    }
+                                    else
+                                    {
+                                        <p><a class="item_add" href="/them-gio-hang?productId=@item.Id&quantity=1"><i></i> <span class=" item_price">@(item.Price.HasValue ? item.Price.Value.ToString("N0") : "Liên hệ")</span></a></p>
+                                    }
+                                </div>
+                            </div>
+                        }
+                    }
+                </div>
+            </div>
+            <div class="col-md-2 single-right">
+                <h3>Danh mục</h3>
+                <ul class="product-categories">
+                    @{ Html.RenderAction("LoadCategory", "Product");}
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+    <div class="text-center col-md-10" style="margin-top: 10px;">
+        <p>Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) trên @Model.PageCount</p>
+        @Html.PagedListPager(Model, page => Url.Action("LoadAllProduct", new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))
+    </div>
+</div>
+<!--end-single-->

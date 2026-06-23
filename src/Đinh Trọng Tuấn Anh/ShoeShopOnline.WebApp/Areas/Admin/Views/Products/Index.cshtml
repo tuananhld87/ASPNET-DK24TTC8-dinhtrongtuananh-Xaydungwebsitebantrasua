@@ -1,0 +1,100 @@
+﻿@model PagedList.IPagedList<ShoeShopOnline.Model.DAL.Product>
+@using PagedList.Mvc;
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+@{
+    ViewBag.Title = "Sản phẩm";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+    int i = 1;
+}
+<!-- DataTales Example -->
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">@ViewBag.Title</h6>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                @using (Html.BeginForm())
+                {
+                    <div class="form-group">
+                        @Html.TextBox("SearchString", null, new { @class = "col-md-4 form-control float-left", @value = ViewBag.SearchString })
+                        <button type="submit" class="btn btn-secondary ml-1"><i class="fa fa-search"></i></button>
+                        <a href="/quan-tri/danh-muc-san-pham/them-moi" class="btn btn-group-sm btn-primary text-decoration-none"><i class="fa fa-plus"></i> Thêm mới</a>
+                    </div>
+                }
+                <thead>
+                    <tr>
+                        <th>
+                            STT
+                        </th>
+                        <th>
+                            Loại sản phẩm
+                        </th>
+                        <th style="width: 240px;">
+                            Tên sản phẩm
+                            <a href="/quan-tri/danh-muc-san-pham?sortOrder=@ViewBag.NameSortParm&searchString=@ViewBag.SearchString"><i class="fas fa-sort text-dark"></i></a>
+                        </th>
+                        <th>
+                            Ảnh
+                        </th>
+                        <th>
+                            Giá
+                            <a href="/quan-tri/danh-muc-san-pham?sortOrder=@ViewBag.PriceSortParm&searchString=@ViewBag.SearchString"><i class="fas fa-sort text-dark"></i></a>
+                        </th>
+                        <th>
+                            Giá khuyến mãi
+                            <a href="/quan-tri/danh-muc-san-pham?sortOrder=@ViewBag.PromotionPriceSortParm&searchString=@ViewBag.SearchString"><i class="fas fa-sort text-dark"></i></a>
+                        </th>
+                        <th>
+                            Số lượng
+                            <a href="/quan-tri/danh-muc-san-pham?sortOrder=@ViewBag.QuantitySortParm&searchString=@ViewBag.SearchString"><i class="fas fa-sort text-dark"></i></a>
+                        </th>
+                        <th class="text-center" style="width: 115px;"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td class="text-center">
+                                @i
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ProductCategory.Name)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Name)
+                            </td>
+                            <td>
+                                <img src="@Html.DisplayFor(modelItem => item.UrlImage)" width="100" height="70" />
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Price)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.PromotionPrice)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Quantity)
+                            </td>
+                            <td>
+                                <a class="btn-sm btn-group-sm btn-success" href="/quan-tri/danh-muc-san-pham/cap-nhat?id=@item.Id"><i class="far fa-edit"></i></a>
+                                <a class="btn-sm btn-group-sm btn-secondary dialog-link" href="@Url.Action("Details", new { id = item.Id })"><i class="fas fa-info"></i></a>
+                                <a class="btn-sm btn-group-sm btn-danger dialog-link" href="@Url.Action("Delete", new { id = item.Id })"><i class="far fa-trash-alt"></i></a>
+                            </td>
+                        </tr>
+                        i++;
+                    }
+                </tbody>
+            </table>
+            @if (Model.Count() <= 0)
+            {
+                <div class="text-center text-danger">Không có dữ liệu</div>
+            }
+        </div>
+        <div class="text-center">
+            Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) trên @Model.PageCount
+            @Html.PagedListPager(Model, page => Url.Action("Index", new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))
+        </div>
+    </div>
+</div>

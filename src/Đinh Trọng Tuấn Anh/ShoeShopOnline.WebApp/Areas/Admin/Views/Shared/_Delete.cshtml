@@ -1,0 +1,22 @@
+﻿@{
+    Layout = null;
+}
+
+<div class="modal fade" id="MyModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="MyModal">Không thể xóa bản ghi. Vui lòng kiểm tra lại!</h4>
+            </div>
+            <div class="modal-footer">
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+                    <div class="form-actions no-color text-center">
+                        <button type="button" class="btn btn-sm btn-danger" data-dismiss="modal">Thoát</button>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,113 @@
+﻿<!--A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shop trà sữa</title>
+  
+    <link href="~/Content/Client/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- Custom Theme files -->
+    <!--theme-style-->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <link href="~/Content/Client/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="~/Content/Client/css/jquery-ui.css" rel="stylesheet" />
+    <script src="~/Content/Client/js/jquery-1.12.4.js"></script>
+    <!--//theme-style-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!--fonts-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link href='http://fonts.googleapis.com/css?family=Alegreya+Sans+SC:100,300,400,500,700,800,900,100italic,300italic,400italic,500italic,700italic,800italic,900italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+    <!--//fonts-->
+    <script type="text/javascript" src="~/Content/Client/js/move-top.js"></script>
+    <script type="text/javascript" src="~/Content/Client/js/easing.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+            $(".scroll").click(function (event) {
+                event.preventDefault();
+                $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
+            });
+        });
+    </script>
+    <script src="~/Content/Client/js/jquery-ui.js"></script>
+    <!-- start menu -->
+    <script src="~/Content/Client/js/simpleCart.min.js"></script>
+    <link href="~/Content/Client/css/memenu.css" rel="stylesheet" type="text/css" media="all" />
+    <script type="text/javascript" src="~/Content/Client/js/memenu.js"></script>
+    <script>$(document).ready(function () { $(".memenu").memenu(); });</script>
+
+    <!--Phan moi-->
+
+
+ 
+
+</head>
+<body id="top">
+    <!--top-header-->
+    @RenderPage("_TopHeader.cshtml")
+    <!--top-header-->
+    <!--bottom-header-->
+    @{Html.RenderAction("MainMenu", "Homes");}
+    @*thong bao cho nguoi dung*@
+
+    @if (TempData["AlertMessage"] != null)
+    {
+        <div class="container" style="right: 10px; top: 135px; position: fixed; z-index: 100;">
+            <div id="AlertBox" class="text-center alert @TempData["AlertType"] hide" style="float:right;">
+                @TempData["AlertMessage"]
+            </div>
+        </div>
+    }
+    <!--bottom-header-->
+    <!--Body-->
+    <div id="body">
+        @RenderBody()
+    </div>
+    <!--End body-->
+    <!--start-footer-->
+    @{Html.RenderAction("Contact", "Homes");}
+    <!--end-footer-->
+    <!--end-footer-text-->
+    @{Html.RenderAction("Footer", "Homes");}
+
+    <a href="#top" id="toTop" class="scroll" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            /*
+            var defaults = {
+                    containerID: 'toTop', // fading element id
+                containerHoverID: 'toTopHover', // fading element hover id
+                scrollSpeed: 1200,
+                easingType: 'linear'
+                };
+            */
+
+            $().UItoTop({ easingType: 'easeOutQuart' });
+
+        });
+    </script>
+    <!--end-footer-text-->
+    <script src="~/Scripts/jquery.shorten.1.0.js"></script>
+    <script>
+        $(".content p").shorten({
+            "showChars": 155,
+            "moreText": "",
+            "lessText": "",
+        });
+    </script>
+    <script>
+        $('#AlertBox').removeClass('hide');
+        $('#AlertBox').delay(3000).slideUp(500);
+    </script>
+    <script src="~/Content/Client/js/Controller/baseController.js"></script>
+    @RenderSection("Scripts", required: false)
+    <script src="~/Scripts/removeAdsSomee.js"></script>
+</body>
+</html>

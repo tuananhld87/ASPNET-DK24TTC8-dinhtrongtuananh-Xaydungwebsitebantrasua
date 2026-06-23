@@ -1,0 +1,99 @@
+﻿@model IEnumerable<ShoeShopOnline.Model.DAL.Order>
+
+@{
+    ViewBag.Title = "Lịch sử mua hàng";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    int i = 1;
+}
+<!--start-breadcrumbs-->
+<div class="breadcrumbs">
+    <div class="container">
+        <div class="breadcrumbs-main">
+            <ol class="breadcrumb">
+                <li><a href="/trang-chu">Trang chủ</a></li>
+                <li class="active">@ViewBag.Title</li>
+            </ol>
+        </div>
+    </div>
+</div>
+<!--end-breadcrumbs-->
+
+
+<div class="table-responsive container" style="margin-top: 10px;">
+    <p>
+        <a href="/don-hang-da-huy" class="btn btn-group-sm btn-primary text-decoration-none">Đơn đã hủy</a>
+    </p>
+    <table class="table table-bordered table-striped table-condensed">
+        <thead>
+            <tr>
+                <th>
+                    STT
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ShipName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ShipPhone)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ShipAddress)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ShipEmail)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CreatedOn)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Status)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td class="text-center">
+                        @i
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ShipName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ShipPhone)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ShipAddress)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ShipEmail)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CreatedOn)
+                    </td>
+                    <td>
+                        @(item.Status ? "Đã hoàn thành" : "Đang xử lý")
+                    </td>
+                    <td class="text-center">
+                        <a class="btn-sm btn-group-sm btn-primary" href="/chi-tiet-don-hang/@item.Id"><i class="fas fa-info"></i></a>
+                        @if (item.Status)
+                        {
+
+                        }
+                        else
+                        {
+                            <a class="btn-sm btn-group-sm btn-danger" onclick="return confirm('Xác nhận hủy đơn hàng!');" href="@Url.Action("CancelOrder", new { id = @item.Id})"><i class="far fa-trash-alt"></i></a>
+                        }
+
+                    </td>
+                </tr>
+                i++;
+            }
+        </tbody>
+    </table>
+    @if (Model.Count() <= 0)
+    {
+        <div class="text-center text-danger">Không có giao dịch</div>
+    }
+</div>

@@ -1,0 +1,36 @@
+﻿@model ShoeShopOnline.Model.DAL.News
+@{
+    ViewBag.Title = Model.Name;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!--start-breadcrumbs-->
+<div class="breadcrumbs">
+    <div class="container">
+        <div class="breadcrumbs-main">
+            <ol class="breadcrumb">
+                <li><a href="/trang-chu">Trang chủ</a></li>
+                <li class="active">@ViewBag.Title</li>
+            </ol>
+        </div>
+    </div>
+</div>
+<!--end-breadcrumbs-->
+<div class="single contact">
+    <div class="container">
+        <div class="single-main">
+            <div class="col-md-9 single-main-left">
+                <h3 class="text-center">@Model.Name</h3>
+                @Html.Raw(Model.Description)
+            </div>
+            <div class="col-md-3 single-right">
+                <h3>Loại tin tức</h3>
+                <ul class="product-categories">
+                    @{ Html.RenderAction("LoadNewsCategory", "NewsContent");}
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+</div>
+<!--end-single-->

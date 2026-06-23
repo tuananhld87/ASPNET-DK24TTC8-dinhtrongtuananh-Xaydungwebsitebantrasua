@@ -1,0 +1,62 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!--banner-starts-->
+@{ Html.RenderAction("Slide", "Homes");}
+<!--banner-ends-->
+<!--Slider-Starts-Here-->
+<script src="~/Content/Client/js/responsiveslides.min.js"></script>
+<script>
+    // You can also use "$(window).load(function() {"
+    $(function () {
+        // Slideshow 4
+        $("#slider4").responsiveSlides({
+            auto: true,
+            pager: true,
+            nav: false,
+            speed: 500,
+            namespace: "callbacks",
+            before: function () {
+                $('.events').append("<li>before event fired.</li>");
+            },
+            after: function () {
+                $('.events').append("<li>after event fired.</li>");
+            }
+        });
+
+    });
+</script>
+<!--End-slider-script-->
+<!--start-banner-bottom-->
+
+@{Html.RenderAction("LoadHotProduct", "Product");}
+<!--end-banner-bottom-->
+<!--start-shoes-->
+<div class="shoes">
+    <h3 style="margin-bottom:10px;margin-top:-35px;margin-left:580px;">SẢN PHẨM BÁN CHẠY</h3>
+    <div class="container">
+        <div class="product-one">
+            @{ Html.RenderAction("LoadNormalProduct1", "Product");}
+            <div class="clearfix"> </div>
+        </div>
+        <div class="product-one">
+            @{ Html.RenderAction("LoadNormalProduct2", "Product");}
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+</div>
+<!--end-shoes-->
+<!--start-abt-shoe-->
+<div class="abt-shoe">
+    <h3 style="margin-bottom:10px;margin-top:-25px;margin-left:600px;">SẢN PHẨM MỚI</h3>
+    <div class="container">
+        <div class="abt-shoe-main">
+            @{Html.RenderAction("LoadNewProduct", "Product");}
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+</div>
+<!--end-abt-shoe-->

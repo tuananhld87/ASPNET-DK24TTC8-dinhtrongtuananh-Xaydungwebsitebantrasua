@@ -1,0 +1,17 @@
+C:\Users\dtngh\Desktop\Project_ASP.NET2\ShoeShopOnline\ShoeShopOnline.Common\bin\Release\ShoeShopOnline.Common.dll
+C:\Users\dtngh\Desktop\Project_ASP.NET2\ShoeShopOnline\ShoeShopOnline.Common\bin\Release\ShoeShopOnline.Common.pdb
+C:\Users\dtngh\Desktop\Project_ASP.NET2\ShoeShopOnline\ShoeShopOnline.Common\obj\Release\ShoeShopOnline.Common.csprojAssemblyReference.cache
+C:\Users\dtngh\Desktop\Project_ASP.NET2\ShoeShopOnline\ShoeShopOnline.Common\obj\Release\ShoeShopOnline.Common.csproj.CoreCompileInputs.cache
+C:\Users\dtngh\Desktop\Project_ASP.NET2\ShoeShopOnline\ShoeShopOnline.Common\obj\Release\ShoeShopOnline.Common.dll
+C:\Users\dtngh\Desktop\Project_ASP.NET2\ShoeShopOnline\ShoeShopOnline.Common\obj\Release\ShoeShopOnline.Common.pdb
+C:\Users\ADMIN\Desktop\TeamAspNet\Group-Santa-SourceCode-ASP\GroupSanta-SourceCode\ShoeShopOnline\ShoeShopOnline.Common\bin\Release\ShoeShopOnline.Common.dll
+C:\Users\ADMIN\Desktop\TeamAspNet\Group-Santa-SourceCode-ASP\GroupSanta-SourceCode\ShoeShopOnline\ShoeShopOnline.Common\bin\Release\ShoeShopOnline.Common.pdb
+C:\Users\ADMIN\Desktop\TeamAspNet\Group-Santa-SourceCode-ASP\GroupSanta-SourceCode\ShoeShopOnline\ShoeShopOnline.Common\obj\Release\ShoeShopOnline.Common.csprojAssemblyReference.cache
+C:\Users\ADMIN\Desktop\TeamAspNet\Group-Santa-SourceCode-ASP\GroupSanta-SourceCode\ShoeShopOnline\ShoeShopOnline.Common\obj\Release\ShoeShopOnline.Common.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\Desktop\TeamAspNet\Group-Santa-SourceCode-ASP\GroupSanta-SourceCode\ShoeShopOnline\ShoeShopOnline.Common\obj\Release\ShoeShopOnline.Common.dll
+C:\Users\ADMIN\Desktop\TeamAspNet\Group-Santa-SourceCode-ASP\GroupSanta-SourceCode\ShoeShopOnline\ShoeShopOnline.Common\obj\Release\ShoeShopOnline.Common.pdb
+C:\Users\ADMIN\Desktop\ShoeShopOnline\ShoeShopOnline.Common\bin\Release\ShoeShopOnline.Common.dll
+C:\Users\ADMIN\Desktop\ShoeShopOnline\ShoeShopOnline.Common\bin\Release\ShoeShopOnline.Common.pdb
+C:\Users\ADMIN\Desktop\ShoeShopOnline\ShoeShopOnline.Common\obj\Release\ShoeShopOnline.Common.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\Desktop\ShoeShopOnline\ShoeShopOnline.Common\obj\Release\ShoeShopOnline.Common.dll
+C:\Users\ADMIN\Desktop\ShoeShopOnline\ShoeShopOnline.Common\obj\Release\ShoeShopOnline.Common.pdb

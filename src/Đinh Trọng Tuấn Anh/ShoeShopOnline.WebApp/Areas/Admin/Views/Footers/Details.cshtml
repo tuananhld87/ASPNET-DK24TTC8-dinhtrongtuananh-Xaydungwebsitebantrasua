@@ -1,0 +1,109 @@
+﻿@model ShoeShopOnline.Model.DAL.Footer
+
+@{
+    Layout = null;
+}
+<div class="modal fade" id="MyModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Chi tiết giới thiệu</h4>
+            </div>
+            <div class="modal-body">
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.CoppyRight)
+                        </th>
+                        <td>
+                            @Html.DisplayFor(model => model.CoppyRight)
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Address)
+                        </th>
+                        <td>
+                            @Html.DisplayFor(model => model.Address)
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Address)
+                        </th>
+                        <td>
+                            @Html.DisplayFor(model => model.Address)
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.PhoneNumber)
+                        </th>
+                        <td>
+                            @Html.DisplayFor(model => model.PhoneNumber)
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.CreatedOn)
+                        </th>
+                        <td>
+                            @Html.DisplayFor(model => model.CreatedOn)
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.CreatedOn)
+                        </th>
+                        <td>
+                            @Html.DisplayFor(model => model.CreatedOn)
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.CreatedBy)
+                        </th>
+                        <td>
+                            @Html.DisplayFor(model => model.CreatedBy)
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.ModifiedOn)
+                        </th>
+                        <td>
+                            @Html.DisplayFor(model => model.ModifiedOn)
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.ModifiedBy)
+                        </th>
+                        <td>
+                            @Html.DisplayFor(model => model.ModifiedBy)
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.IsDeleted)
+                        </th>
+                        <td>
+                            <a href="#" class="btn-primary btn-sm text-decoration-none">@(Model.IsDeleted ? "Không hiển thị" : "Hiển thị")</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <!-- /.modal-body -->
+            <div class="modal-footer">
+                <div class="form-actions no-color text-center">
+                    <a href="/quan-tri/footer/cap-nhat?id=@Model.Id" class="btn-sm btn-group-sm btn-primary"><i class="far fa-edit"></i>Sửa</a>
+                    <button type="button" class="btn btn-sm btn-secondary" style=" border: 0.5px solid #a8a9ad;" data-dismiss="modal">Thoát</button>
+                </div>
+            </div>
+            <!-- /.modal-footer -->
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->

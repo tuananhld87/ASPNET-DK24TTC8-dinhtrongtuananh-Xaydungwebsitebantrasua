@@ -1,0 +1,19 @@
+﻿@model IEnumerable<ShoeShopOnline.Model.DAL.Product>
+@if ((int)ViewBag.Count > 0)
+{
+    foreach (var item in Model)
+    {
+        var url = "/chi-tiet-san-pham/" + item.MetaTitle + "/" + item.Id;
+        <div class="col-md-4 abt-shoe-left" style="height: 450px;">
+            <div class="abt-one" style="height: 430px;">
+                <a href="@url"><img src="@item.UrlImage" width="350" height="160" alt="" /></a>
+                <h4 style="height:50px;"><a href="@url">@item.Name</a></h4>
+                <div class="content" style="height:120px;">
+                    @Html.Raw(item.Detail)
+                </div>
+                <a href="@url">Xem chi tiết</a>
+            </div>
+        </div>
+    }
+}
+

@@ -1,0 +1,17 @@
+﻿@model IEnumerable<ShoeShopOnline.Model.DAL.Menu>
+@if ((int)ViewBag.Count > 0)
+{
+    <div class="mepanel">
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="col1 me-one">
+                    <h4>
+                        <a href="@item.Link" style="color: #8c2830;" target="@item.Target">@item.MenuName</a>
+                    </h4>
+                </div>
+            }
+        </div>
+    </div>
+}
+    

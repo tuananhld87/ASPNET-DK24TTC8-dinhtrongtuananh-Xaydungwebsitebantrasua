@@ -1,0 +1,108 @@
+﻿@model ShoeShopOnline.Model.DAL.Product
+
+@{
+    Layout = null;
+}
+<div class="modal fade" id="MyModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Chi tiết sản phẩm</h4>
+            </div>
+            <div class="modal-body">
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th style="width: 140px;">@Html.DisplayNameFor(model => model.ProductCategory.Name)</th>
+                        <td>@Html.DisplayFor(model => model.ProductCategory.Name)</td>
+                    </tr>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.Name)</th>
+                        <td>@Html.DisplayFor(model => model.Name)</td>
+                    </tr>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.Code)</th>
+                        <td>@Html.DisplayFor(model => model.Code)</td>
+                    </tr>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.MetaTitle)</th>
+                        <td>@Html.DisplayFor(model => model.MetaTitle)</td>
+                    </tr>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.MetaKeywords)</th>
+                        <td>@Html.DisplayFor(model => model.MetaKeywords)</td>
+                    </tr>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.UrlImage)</th>
+                        <td><img src="@Html.DisplayFor(model => model.UrlImage)" alt="Alternate Text" width="100" height="70" /></td>
+                    </tr>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.Price)</th>
+                        <td>@Html.DisplayFor(model => model.Price)</td>
+                    </tr>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.PromotionPrice)</th>
+                        <td>@Html.DisplayFor(model => model.PromotionPrice)</td>
+                    </tr>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.Quantity)</th>
+                        <td>@Html.DisplayFor(model => model.Quantity)</td>
+                    </tr>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.TopHot)</th>
+                        <td>@Html.DisplayFor(model => model.TopHot)</td>
+                    </tr>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.IsNewProduct)</th>
+                        <td>@Html.DisplayFor(model => model.IsNewProduct)</td>
+                    </tr>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.IsNormalProduct1)</th>
+                        <td>@Html.DisplayFor(model => model.IsNormalProduct1)</td>
+                    </tr>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.IsNormalProduct2)</th>
+                        <td>@Html.DisplayFor(model => model.IsNormalProduct2)</td>
+                    </tr>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.CreatedBy)</th>
+                        <td>@Html.DisplayFor(model => model.CreatedBy)</td>
+                    </tr>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.CreatedOn)</th>
+                        <td>@Html.DisplayFor(model => model.CreatedOn)</td>
+                    </tr>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.ModifiedBy)</th>
+                        <td>@Html.DisplayFor(model => model.ModifiedBy)</td>
+                    </tr>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.ModifiedOn)</th>
+                        <td>@Html.DisplayFor(model => model.ModifiedOn)</td>
+                    </tr>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.IsDeleted)</th>
+                        <td>
+                            <a href="#" class="btn-primary btn-sm text-decoration-none">@(Model.IsDeleted ? "Không hiển thị" : "Hiển thị")</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.Description)</th>
+                        <td>@Html.Raw(Model.Description)</td>
+                    </tr>
+                </table>
+
+            </div>
+            <!-- /.modal-body -->
+            <div class="modal-footer">
+                <div class="form-actions no-color text-center">
+                    <a href="/quan-tri/danh-muc-san-pham/cap-nhat?id=@Model.Id" class="btn-sm btn-group-sm btn-primary"><i class="far fa-edit"></i>Sửa</a>
+                    <button type="button" class="btn btn-sm btn-secondary" style=" border: 0.5px solid #a8a9ad;" data-dismiss="modal">Thoát</button>
+                </div>
+            </div>
+            <!-- /.modal-footer -->
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->

@@ -1,0 +1,68 @@
+﻿@model IEnumerable<ShoeShopOnline.Model.DAL.Feedback>
+
+@{
+    ViewBag.Title = "Phản hồi ý kiến khách hàng";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+    int i = 1;
+}
+<!-- DataTales Example -->
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">@ViewBag.Title</h6>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <p>
+                    <a href="/quan-tri/phan-quyen-nguoi-dung/them-moi" class="btn btn-group-sm btn-primary text-decoration-none"><i class="fa fa-plus"></i> Thêm mới</a>
+                </p>
+                <thead>
+                    <tr>
+                        <th>
+                            STT
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Name)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Content)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Reply)
+                        </th>
+                        <th style="width: 135px;"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @i
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Name)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Content)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Reply)
+                            </td>
+                            <td class="text-center">
+                                <a class="btn-sm btn-group-sm btn-success" href="/quan-tri/phan-hoi-y-kien-khach-hang/cap-nhat?id=@item.Id"><i class="far fa-edit"></i></a>
+                                <a class="btn-sm btn-group-sm btn-secondary dialog-link" href="@Url.Action("Details", new { id = item.Id })"><i class="fas fa-info"></i></a>
+                                <a class="btn-sm btn-group-sm btn-danger dialog-link" href="@Url.Action("Delete", new { id = item.Id })"><i class="far fa-trash-alt"></i></a>
+                            </td>
+                        </tr>
+                        i++;
+                    }
+                </tbody>
+            </table>
+            @if (Model.Count() <= 0)
+            {
+                <div class="text-center">Không có dữ liệu</div>
+            }
+        </div>
+    </div>
+</div>

@@ -1,0 +1,55 @@
+﻿@model IEnumerable<ShoeShopOnline.Model.DAL.Feedback>
+
+@{
+    ViewBag.Title = "Phản hồi ý kiến khách hàng";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    int i = 1;
+}
+
+<!--start-breadcrumbs-->
+<div class="breadcrumbs">
+    <div class="container">
+        <div class="breadcrumbs-main">
+            <ol class="breadcrumb">
+                <li><a href="/trang-chu">Trang chủ</a></li>
+                <li class="active">@ViewBag.Title</li>
+            </ol>
+        </div>
+    </div>
+</div>
+<!--end-breadcrumbs-->
+@using (Html.BeginForm("ReplyFeedBack", "FeedBack", FormMethod.Post))
+{
+    <div class="contact">
+        <div class="container">
+            <div class="contact-top heading">
+                <h3>@ViewBag.Title</h3>
+            </div>
+            <div class="contact-bottom">
+                <div class="col-md-12 contact-left">
+                    <table class="table table-hover table-striped table-bordered">
+                        <tr>
+                            <th>STT</th>
+                            <th>Tên khách hàng</th>
+                            <th>Nội dung</th>
+                            <th>Trả lời từ cửa hàng</th>
+                        </tr>
+
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@i</td>
+                                <td>@item.Name</td>
+                                <td>@item.Content</td>
+                                <td>@item.Reply</td>
+                            </tr>
+                            i++;
+                        }
+
+                    </table>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+}

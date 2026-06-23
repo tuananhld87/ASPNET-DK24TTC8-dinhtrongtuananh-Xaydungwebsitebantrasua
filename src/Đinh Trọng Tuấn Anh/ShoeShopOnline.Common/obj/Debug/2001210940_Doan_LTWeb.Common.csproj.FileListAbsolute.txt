@@ -1,0 +1,6 @@
+C:\Users\itvip\Downloads\2001210940_Doan_LTWeb\2001210940_Doan_LTWeb\SHOP\ShoeShopOnline.Common\bin\Debug\ShoeShopOnline.Common.dll
+C:\Users\itvip\Downloads\2001210940_Doan_LTWeb\2001210940_Doan_LTWeb\SHOP\ShoeShopOnline.Common\bin\Debug\ShoeShopOnline.Common.pdb
+C:\Users\itvip\Downloads\2001210940_Doan_LTWeb\2001210940_Doan_LTWeb\SHOP\ShoeShopOnline.Common\obj\Debug\2001210940_Doan_LTWeb.Common.csproj.AssemblyReference.cache
+C:\Users\itvip\Downloads\2001210940_Doan_LTWeb\2001210940_Doan_LTWeb\SHOP\ShoeShopOnline.Common\obj\Debug\2001210940_Doan_LTWeb.Common.csproj.CoreCompileInputs.cache
+C:\Users\itvip\Downloads\2001210940_Doan_LTWeb\2001210940_Doan_LTWeb\SHOP\ShoeShopOnline.Common\obj\Debug\ShoeShopOnline.Common.dll
+C:\Users\itvip\Downloads\2001210940_Doan_LTWeb\2001210940_Doan_LTWeb\SHOP\ShoeShopOnline.Common\obj\Debug\ShoeShopOnline.Common.pdb

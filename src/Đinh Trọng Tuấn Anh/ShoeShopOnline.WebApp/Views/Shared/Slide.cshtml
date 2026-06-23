@@ -1,0 +1,18 @@
+﻿@model IEnumerable<ShoeShopOnline.Model.DAL.Slide>
+
+@if (Model != null && Model.Any())
+{
+    <div class="bnr" id="home">
+        <div id="top" class="callbacks_container">
+            <ul class="rslides" id="slider4">
+                @foreach (var item in Model)
+                {
+                    <li>
+                        <img src="@Url.Content(item.UrlImage)" alt="Banner image" style="width: 100%; height: auto;" />
+                    </li>
+                }
+            </ul>
+        </div>
+        <div class="clearfix"> </div>
+    </div>
+}
